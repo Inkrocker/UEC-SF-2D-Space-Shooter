@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Laser
+  - SpawnManager
+  - PowerUps
+  - EarthUI
+  - CreditsPanel
+  - EnemyAsteroids
+  - MoonSurface
+  - EnemyHealth
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Post Process
+  - Post Process UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1184410245
+    locked: 0
+  - name: Middleground
+    uniqueID: 1557888581
+    locked: 0
+  - name: Foreground
+    uniqueID: 2065229217
+    locked: 0
+  - name: FX n Power-Ups
+    uniqueID: 562086769
+    locked: 0
+  - name: Player n Enemies
+    uniqueID: 4042485383
+    locked: 0
+  - name: FX Overlayed
+    uniqueID: 1602429881
+    locked: 0
