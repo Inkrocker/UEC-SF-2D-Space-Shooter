@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Moon : MonoBehaviour
 {
-
-    private float _moonSpeed = 0.75f;
+    [SerializeField]
+    private float _moonSpeed;
 
     void Update()
     {
         transform.Translate(_moonSpeed * Vector3.left * Time.deltaTime);
 
-        if (transform.position.x <= -24.76f)
+        if (transform.position.x <= -20.48f)
         {
-            transform.position = new Vector3(36.67f, -3.50f, 0.0f);
+            transform.position = new Vector3(40.96f, -3.50f, 0.0f);
         }
     }
 }

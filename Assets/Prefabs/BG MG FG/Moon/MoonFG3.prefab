@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7864511091137749812}
   - component: {fileID: 3732730950155760467}
-  - component: {fileID: 8723784461203827882}
   m_Layer: 0
   m_Name: MoonFG3
   m_TagString: Untagged
@@ -82,15 +81,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8723784461203827882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7548191738997820786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf0afdf0c66b874da97063edcb3c2bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -9,7 +9,7 @@ public class EarthRotation : MonoBehaviour
     private GameObject _earth;
 
     [SerializeField]
-    private float _earthSpeed = 1;
+    private float _earthSpeed = 1.25f;
 
     private void Update()
     {
