@@ -33,7 +33,15 @@ public class Player : MonoBehaviour
     public bool isShieldsActive = false;
 
     [SerializeField]
-    private GameObject _shieldVisualizerPrefab;
+    private GameObject _shieldVisualPrefab;
+
+    [SerializeField]
+    private GameObject _shieldVisualPrefab2;
+
+    [SerializeField]
+    private GameObject _shieldVisualPrefab3;
+
+    private int _shieldStrength = 3;
 
     [SerializeField]
     private GameObject _burnDmg01Prefab;
@@ -200,8 +208,27 @@ public class Player : MonoBehaviour
     {
         if (isShieldsActive == true)
         {
-            isShieldsActive = false;
-            _shieldVisualizerPrefab.SetActive(false);
+            _shieldStrength--;
+
+            if(_shieldStrength == 2)
+            {
+                _shieldVisualPrefab.SetActive(false);
+                _shieldVisualPrefab2.SetActive(true);
+                _shieldVisualPrefab3.SetActive(false);
+            }
+
+            else if(_shieldStrength == 1)
+            {
+                _shieldVisualPrefab.SetActive(false);
+                _shieldVisualPrefab2.SetActive(false);
+                _shieldVisualPrefab3.SetActive(true);
+            }
+
+            else if(_shieldStrength == 0)
+            {
+                _shieldVisualPrefab3.SetActive(false);
+                isShieldsActive = false;
+            }
             return;
         }
 
@@ -254,7 +281,7 @@ public class Player : MonoBehaviour
     public void ShieldsActive()
     {
         isShieldsActive = true;
-        _shieldVisualizerPrefab.SetActive(true);
+        _shieldVisualPrefab.SetActive(true);
     }
 
     public void BurnDamage()
