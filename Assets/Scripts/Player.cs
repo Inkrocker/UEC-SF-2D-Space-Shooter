@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
 
     public bool isShieldsActive = false;
 
+    public bool isLifeUpActive = false;
+
     [SerializeField]
     private GameObject _shieldVisualPrefab;
 
@@ -228,6 +230,7 @@ public class Player : MonoBehaviour
             {
                 _shieldVisualPrefab3.SetActive(false);
                 isShieldsActive = false;
+                _shieldStrength = 3;
             }
             return;
         }
@@ -282,6 +285,31 @@ public class Player : MonoBehaviour
     {
         isShieldsActive = true;
         _shieldVisualPrefab.SetActive(true);
+    }
+
+    public void LifeUpActive()
+    {
+        isLifeUpActive = true;
+
+        if(_lives == 3)
+        {
+            _lives = 3;
+            Debug.Log("No change to lives");
+        }
+
+        else if(_lives == 2)
+        {
+            _lives = 3;
+            _burnDmg01Prefab.SetActive(false);
+            Debug.Log("Lives Updated to 3");
+        }
+
+        else if(_lives == 1)
+        {
+            _lives = 2;
+            _burnDmg02Prefab.SetActive(false);
+            Debug.Log("Lives Updated to 2");
+        }
     }
 
     public void BurnDamage()

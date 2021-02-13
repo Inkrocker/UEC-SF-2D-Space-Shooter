@@ -7,7 +7,7 @@ public class AlienMonolith : MonoBehaviour
     [SerializeField]
     private GameObject _monolithExplosionPrefab;
 
-    private int _monolithHealth = 10;
+    private int _monolithHealth = 5;
 
     public SpriteRenderer spriteFlashColor;
 
