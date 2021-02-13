@@ -16,6 +16,9 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     private GameObject[] _powerUpPrefabs;
 
+    [SerializeField]
+    private GameObject _lifeUpPrefab;
+
     private float RandomEnemyCount;
 
     private bool _stopSpawning = false;
@@ -24,6 +27,7 @@ public class SpawnManager : MonoBehaviour
     public void StartSpawning()
     {
         StartCoroutine(SpawnPowerUpsRoutine());
+        StartCoroutine(SpawnLifeUpRarelyRoutine());
         RandomAmountEnemy01Spawned();
         StartCoroutine(AsteroidEnemyRoutine());
         StartCoroutine(VariantAsteroidEnemyRoutine());
@@ -85,9 +89,20 @@ public class SpawnManager : MonoBehaviour
         {
             yield return new WaitForSeconds(3.0f);
             Vector3 posToSpawnPowerUp = new Vector3(Random.Range(-4.0f, 4.25f), 11.0f, 0.0f);
-            int randomPowerUp = Random.Range(0, 4);
+            int randomPowerUp = Random.Range(0, 3);
             Instantiate(_powerUpPrefabs[randomPowerUp], posToSpawnPowerUp, Quaternion.identity);
             yield return new WaitForSeconds(Random.Range (2.5f, 5.0f));
+        }
+    }
+
+    IEnumerator SpawnLifeUpRarelyRoutine()
+    {
+        while(_stopSpawning == false)
+        {
+            yield return new WaitForSeconds(15.0f);
+            Vector3 posToSpawnLifeUp = new Vector3(Random.Range(-4.0f, 4.25f), 11.0f, 0.0f);
+            Instantiate(_lifeUpPrefab, posToSpawnLifeUp, Quaternion.identity);
+            yield return new WaitForSeconds(Random.Range(15.0f, 20.0f));
         }
     }
 
