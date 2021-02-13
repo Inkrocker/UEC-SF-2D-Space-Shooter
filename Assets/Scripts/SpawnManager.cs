@@ -5,9 +5,6 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _alienMonolithPrefab;
-
-    [SerializeField]
     private GameObject[] _enemyAsteroidPrefab;
 
     [SerializeField]
@@ -27,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     public void StartSpawning()
     {
         StartCoroutine(SpawnPowerUpsRoutine());
-        RandomAmountOfEnemy01Spawned();
+        RandomAmountEnemy01Spawned();
         StartCoroutine(AsteroidEnemyRoutine());
         StartCoroutine(VariantAsteroidEnemyRoutine());
     }
@@ -36,12 +33,12 @@ public class SpawnManager : MonoBehaviour
     {
         while (_stopSpawning == false)
         {
-            yield return new WaitForSeconds(5.5f);
+            yield return new WaitForSeconds(15.0f);
             for (int i = 0; i < _enemyAsteroidPrefab.Length; i++)
             {
                 Vector3 placeSpawningAsteroids = new Vector3(0.0f, Random.Range(-4.5f, 9.6f), 0.0f);
                 Instantiate(_enemyAsteroidPrefab[i], placeSpawningAsteroids, Quaternion.Euler(0, 0, -30));
-                yield return new WaitForSeconds(3.75f);
+                yield return new WaitForSeconds(7.0f);
             }            
         }
     }
@@ -50,7 +47,7 @@ public class SpawnManager : MonoBehaviour
     {
         while (_stopSpawning == false)
         {
-            yield return new WaitForSeconds(4.5f);
+            yield return new WaitForSeconds(20.0f);
             for (int i = 0; i < _enemyAsteroidPrefab.Length; i++)
             {
                 Vector3 placeSpawningAsteroids = new Vector3(0.0f, Random.Range(-4.5f, 9.6f), 0.0f);
@@ -60,7 +57,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    void RandomAmountOfEnemy01Spawned()
+    void RandomAmountEnemy01Spawned()
     {
         RandomEnemyCount = Random.Range(5, 8);
 

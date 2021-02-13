@@ -16,7 +16,7 @@ public class AlienMonolith : MonoBehaviour
     private SpawnManager _spawnManager;
 
     void Start()
-    {   transform.position = new Vector3(7.0f, 0.0f, 0.0f);
+    {   transform.position = new Vector3(12.0f, 0.0f, 0.0f);
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
         _player = GameObject.Find("Player").GetComponent<Player>();
        

@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject _tripleShotPrefab;
 
-    private float _fireRate = 0.125f;
+    private float _fireRate = 0.2f;
 
     private float _tripleFireFate = 0.05f;
 
@@ -33,10 +33,7 @@ public class Player : MonoBehaviour
     public bool isShieldsActive = false;
 
     [SerializeField]
-    private GameObject _shieldVisualizerFrontPrefab;
-
-    [SerializeField]
-    private GameObject _shieldVisualizerBackPrefab;
+    private GameObject _shieldVisualizerPrefab;
 
     [SerializeField]
     private GameObject _burnDmg01Prefab;
@@ -182,7 +179,7 @@ public class Player : MonoBehaviour
 
     void LaserShot()
     {
-        var laserOffset = new Vector3(1.586f, -0.329f, 0.0f);
+        var laserOffset = new Vector3(1.348f, -0.282f, 0.0f);
 
         if (isTripleShotActive == true)
         {
@@ -204,8 +201,7 @@ public class Player : MonoBehaviour
         if (isShieldsActive == true)
         {
             isShieldsActive = false;
-            _shieldVisualizerFrontPrefab.SetActive(false);
-            _shieldVisualizerBackPrefab.SetActive(false);
+            _shieldVisualizerPrefab.SetActive(false);
             return;
         }
 
@@ -258,8 +254,7 @@ public class Player : MonoBehaviour
     public void ShieldsActive()
     {
         isShieldsActive = true;
-        _shieldVisualizerFrontPrefab.SetActive(true);
-        _shieldVisualizerBackPrefab.SetActive(true);
+        _shieldVisualizerPrefab.SetActive(true);
     }
 
     public void BurnDamage()

@@ -9,6 +9,11 @@ public class Moon : MonoBehaviour
 
     void Update()
     {
+        MoonMovement();
+    }
+
+    void MoonMovement()
+    {
         transform.Translate(_moonSpeed * Vector3.left * Time.deltaTime);
 
         if (transform.position.x <= -20.48f)

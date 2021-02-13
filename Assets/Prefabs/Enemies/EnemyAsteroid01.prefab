@@ -133,7 +133,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a885c043fab7e46438bba03ba9dab6bc, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 0.75
   Loop: 0
@@ -232,3 +232,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosionPrefab: {fileID: 8632445555511600909, guid: f9979f04a66105e459de9f728db87d73,
     type: 3}
+  _spriteFlashColor: {fileID: 7364600482866705390}

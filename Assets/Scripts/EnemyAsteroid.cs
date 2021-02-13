@@ -11,11 +11,18 @@ public class EnemyAsteroid : MonoBehaviour
 
     private Player _player;
 
+    public SpriteRenderer _spriteFlashColor;
+
+    private int _asteroidHealth = 2;
+
+    private AudioSource _audioSource;
+
     private void Start()
     {
         _asteroidSpeed = Random.Range(0.75f, 2.0f);
         transform.position = new Vector3(Random.Range(0.0f, 9.6f), 6.0f, 0.0f);
         _player = GameObject.Find("Player").GetComponent<Player>();
+        _audioSource = GetComponent<AudioSource>();
 
 
         if (_player == null)
@@ -36,7 +43,6 @@ public class EnemyAsteroid : MonoBehaviour
         if(transform.position.y <= -4.2f)
         {
             _asteroidSpeed = 0;
-            this.transform.GetComponent<Collider2D>().enabled = false;
             Destroy(this.gameObject);
             Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y, 0);
             Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
@@ -54,7 +60,7 @@ public class EnemyAsteroid : MonoBehaviour
                 player.Damage();
             }
             _asteroidSpeed = 0;
-            this.gameObject.GetComponent<Collider2D>().enabled = false;
+            _audioSource.Play();
             Destroy(this.gameObject);
             Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y, 0);
             Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
@@ -63,17 +69,33 @@ public class EnemyAsteroid : MonoBehaviour
         else if (other.tag == "Laser")
         {
             Destroy(other.gameObject);
-            if (_player != null)
+            
+            _asteroidHealth--;
+            StartCoroutine(FlashAsteroidRed());
+
+            if (_asteroidHealth == 0 && _player != null)
             {
                 _player.AddToScore(30);
+                _asteroidSpeed = 0;
+                _audioSource.Play();
+                Destroy(GetComponent<Collider2D>());
+                Destroy(this.gameObject);
+                Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y, 0);
+                Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
             }
-            _asteroidSpeed = 0;
-            this.gameObject.GetComponent<Collider2D>().enabled = false;
-            Destroy(GetComponent<Collider2D>());
-            Destroy(this.gameObject);
-            Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y, 0);
-            Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
+        }
+    }
 
+    IEnumerator FlashAsteroidRed()
+    {
+        _spriteFlashColor.color = Color.red;
+        yield return new WaitForSeconds(0.125f);
+        _spriteFlashColor.color = Color.white;
+
+        if (_asteroidHealth == 0)
+        {
+            _asteroidHealth = 0;
+            StopCoroutine(FlashAsteroidRed());
         }
     }
 }
