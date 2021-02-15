@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        transform.position = new Vector3(-6.0f, 0, 0);
+        transform.position = new Vector3(-6f, 0, 0);
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
         _uiManager = GameObject.Find("UI_Manager").GetComponent<UIManager>();
         _audioSource = GameObject.Find("AudioSource").GetComponent<AudioSource>();
@@ -262,7 +262,7 @@ public class Player : MonoBehaviour
 
     IEnumerator TripleShotPowerDownRoutine()
     {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(5f);
         isTripleShotActive = false;
     }
 
@@ -278,7 +278,7 @@ public class Player : MonoBehaviour
 
     IEnumerator SpeedBoostPowerDownRoutine()
     {
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(5f);
         isSpeedBoostActive = false;
         _speed = 5;
     }
@@ -305,6 +305,7 @@ public class Player : MonoBehaviour
         else if(_lives == 2)
         {
             _lives = 3;
+            _uiManager.UpdateLifeArray(_lives);
             _burnDmg01Prefab.SetActive(false);
             Debug.Log("Lives Updated to 3");
         }
@@ -312,6 +313,7 @@ public class Player : MonoBehaviour
         else if(_lives == 1)
         {
             _lives = 2;
+            _uiManager.UpdateLifeArray(_lives);
             _burnDmg02Prefab.SetActive(false);
             Debug.Log("Lives Updated to 2");
         }
