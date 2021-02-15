@@ -212,22 +212,24 @@ public class Player : MonoBehaviour
         {
             _shieldStrength--;
 
-            if(_shieldStrength == 2)
+            if (_shieldStrength == 2)
             {
                 _shieldVisualPrefab.SetActive(false);
                 _shieldVisualPrefab2.SetActive(true);
                 _shieldVisualPrefab3.SetActive(false);
             }
 
-            else if(_shieldStrength == 1)
+            if(_shieldStrength == 1)
             {
                 _shieldVisualPrefab.SetActive(false);
                 _shieldVisualPrefab2.SetActive(false);
                 _shieldVisualPrefab3.SetActive(true);
             }
 
-            else if(_shieldStrength == 0)
+            if(_shieldStrength == 0)
             {
+                _shieldVisualPrefab.SetActive(false);
+                _shieldVisualPrefab2.SetActive(false);
                 _shieldVisualPrefab3.SetActive(false);
                 isShieldsActive = false;
                 _shieldStrength = 3;
@@ -284,7 +286,10 @@ public class Player : MonoBehaviour
     public void ShieldsActive()
     {
         isShieldsActive = true;
-        _shieldVisualPrefab.SetActive(true);
+        if(_shieldStrength == 3)
+        {
+            _shieldVisualPrefab.SetActive(true);
+        }
     }
 
     public void LifeUpActive()

@@ -37,12 +37,12 @@ public class SpawnManager : MonoBehaviour
     {
         while (_stopSpawning == false)
         {
-            yield return new WaitForSeconds(15.0f);
+            yield return new WaitForSeconds(15);
             for (int i = 0; i < _enemyAsteroidPrefab.Length; i++)
             {
-                Vector3 placeSpawningAsteroids = new Vector3(0.0f, Random.Range(-4.5f, 9.6f), 0.0f);
+                Vector3 placeSpawningAsteroids = new Vector3(0, Random.Range(-4.5f, 9.6f), 0);
                 Instantiate(_enemyAsteroidPrefab[i], placeSpawningAsteroids, Quaternion.Euler(0, 0, -30));
-                yield return new WaitForSeconds(7.0f);
+                yield return new WaitForSeconds(7);
             }            
         }
     }
@@ -51,10 +51,10 @@ public class SpawnManager : MonoBehaviour
     {
         while (_stopSpawning == false)
         {
-            yield return new WaitForSeconds(20.0f);
+            yield return new WaitForSeconds(20);
             for (int i = 0; i < _enemyAsteroidPrefab.Length; i++)
             {
-                Vector3 placeSpawningAsteroids = new Vector3(0.0f, Random.Range(-4.5f, 9.6f), 0.0f);
+                Vector3 placeSpawningAsteroids = new Vector3(0, Random.Range(-4.5f, 9.6f), 0);
                 Instantiate(_enemyAsteroidPrefab[i], placeSpawningAsteroids, Quaternion.Euler(0, 0, -60));
                 yield return new WaitForSeconds(2.25f);
             }
@@ -75,8 +75,8 @@ public class SpawnManager : MonoBehaviour
     {
         while (_stopSpawning == false)
         {
-            yield return new WaitForSeconds(3.0f);
-            Vector3 placeToSpawn = new Vector3(Random.Range (-3.25f, 4.25f), 11.0f, 0.0f);
+            yield return new WaitForSeconds(3);
+            Vector3 placeToSpawn = new Vector3(Random.Range (-3.25f, 4.25f), 11, 0);
             GameObject newEnemy = Instantiate(_enemyPrefab, placeToSpawn, Quaternion.identity);
             newEnemy.transform.parent = _enemyContainer.transform;
             yield return new WaitForSeconds(Random.Range(1.5f, 2.75f));
@@ -87,11 +87,11 @@ public class SpawnManager : MonoBehaviour
     {
         while(_stopSpawning == false)
         {
-            yield return new WaitForSeconds(3.0f);
-            Vector3 posToSpawnPowerUp = new Vector3(Random.Range(-4.0f, 4.25f), 11.0f, 0.0f);
+            yield return new WaitForSeconds(3);
+            Vector3 posToSpawnPowerUp = new Vector3(Random.Range(-4.0f, 4.25f), 11, 0);
             int randomPowerUp = Random.Range(0, 3);
             Instantiate(_powerUpPrefabs[randomPowerUp], posToSpawnPowerUp, Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range (2.5f, 5.0f));
+            yield return new WaitForSeconds(Random.Range (2.5f, 6));
         }
     }
 
@@ -99,10 +99,10 @@ public class SpawnManager : MonoBehaviour
     {
         while(_stopSpawning == false)
         {
-            yield return new WaitForSeconds(15.0f);
-            Vector3 posToSpawnLifeUp = new Vector3(Random.Range(-4.0f, 4.25f), 11.0f, 0.0f);
+            yield return new WaitForSeconds(15);
+            Vector3 posToSpawnLifeUp = new Vector3(Random.Range(-4.0f, 4.25f), 11, 0);
             Instantiate(_lifeUpPrefab, posToSpawnLifeUp, Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range(15.0f, 20.0f));
+            yield return new WaitForSeconds(Random.Range(15, 21));
         }
     }
 
