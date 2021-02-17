@@ -43,6 +43,7 @@ public class AlienMonolith : MonoBehaviour
             if (_monolithHealth == 0)
             {
                 _spawnManager.StartSpawning();
+                Destroy(GetComponent<Collider2D>());
                 Destroy(this.gameObject, 0.3f);
                 Vector3 SpawnMonolithExplosion = new Vector3(transform.position.x, transform.position.y, 0.0f);
                 Instantiate(_monolithExplosionPrefab, SpawnMonolithExplosion, Quaternion.identity);
@@ -50,7 +51,7 @@ public class AlienMonolith : MonoBehaviour
 
             if(_player != null)
             {
-                _player.AddToScore(10);
+                _player.AddToScore(5);
             }
            
         }

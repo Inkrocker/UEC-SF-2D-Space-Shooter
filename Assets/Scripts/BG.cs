@@ -18,7 +18,7 @@ public class BG : MonoBehaviour
 
         if (transform.position.x < -23f)
         {
-            transform.position = new Vector3(22f, 0.6f, 0.0f);
+            transform.position = new Vector3(22f, transform.position.y, 0.0f);
         }
     }
 }

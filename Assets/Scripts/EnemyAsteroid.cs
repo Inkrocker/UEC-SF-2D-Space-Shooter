@@ -13,7 +13,7 @@ public class EnemyAsteroid : MonoBehaviour
 
     public SpriteRenderer _spriteFlashColor;
 
-    private int _asteroidHealth = 2;
+    private int _asteroidHealth = 5;
 
     private AudioSource _audioSource;
 
@@ -75,7 +75,7 @@ public class EnemyAsteroid : MonoBehaviour
 
             if (_asteroidHealth == 0 && _player != null)
             {
-                _player.AddToScore(30);
+                _player.AddToScore(25);
                 _asteroidSpeed = 0;
                 _audioSource.Play();
                 Destroy(GetComponent<Collider2D>());

@@ -10,7 +10,7 @@ public class Enemy01 : MonoBehaviour
 
     private Animator _enemy01_Anim;
 
-    private int _enemyHealth = 3;
+    private int _enemyHealth = 2;
 
     public SpriteRenderer _spriteFlashColor;
 
