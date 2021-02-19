@@ -9,7 +9,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField]
     private GameObject _pausePanelPrefab;
 
-    public static bool gameIsPaused;
+    private static bool gameIsPaused;
 
     private void Update()
     {
@@ -18,11 +18,10 @@ public class PauseManager : MonoBehaviour
             _pausePanelPrefab.SetActive(!_pausePanelPrefab.gameObject.activeSelf);
 
             gameIsPaused = !gameIsPaused;
-
             PauseTheGame();
-            ReturnToMainMenu();
-            QuitGame();
         }
+
+        GoMainMenuOrQuitGame();
     }
 
     void PauseTheGame()
@@ -38,19 +37,23 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    void ReturnToMainMenu()
+    void GoMainMenuOrQuitGame()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Time.timeScale == 0)
         {
-            SceneManager.LoadScene(0); // Return to Main Menu
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                gameIsPaused = !gameIsPaused;
+                SceneManager.LoadScene("Main_Menu"); // Return to Main Menu
+            }
         }
-    }
 
-    void QuitGame()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
+        else if(Time.timeScale == 0)
         {
-            Application.Quit();
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Application.Quit();
+            }
         }
     }
 }
