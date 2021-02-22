@@ -22,6 +22,7 @@ public class PauseManager : MonoBehaviour
         }
 
         GoMainMenuOrQuitGame();
+        QuitGame();
     }
 
     void PauseTheGame()
@@ -47,8 +48,11 @@ public class PauseManager : MonoBehaviour
                 SceneManager.LoadScene("Main_Menu"); // Return to Main Menu
             }
         }
+    }
 
-        else if(Time.timeScale == 0)
+    void QuitGame()
+    {
+        if(Time.timeScale == 0)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
