@@ -24,10 +24,10 @@ public class UIManager : MonoBehaviour
     private GameObject _shieldsHUDPrefab;
 
     [SerializeField]
-    public Text gameOverText;
+    private Text gameOverText, gameOverText2, gameOverText3;
 
     [SerializeField]
-    public GameObject restartLevelText;
+    private GameObject restartLevelButton;
 
     [SerializeField]
     private GameManager _gameManager;
@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
     {
         _scoreText.text = "" + 0;
         gameOverText.gameObject.SetActive(false);
-        restartLevelText.gameObject.SetActive(false);
+        restartLevelButton.gameObject.SetActive(false);
         _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         _player = GameObject.Find("Player").GetComponent<Player>();
 
@@ -126,18 +126,33 @@ public class UIManager : MonoBehaviour
     {
         _gameManager.GameOver();
         gameOverText.gameObject.SetActive(true);
+        gameOverText2.gameObject.SetActive(true);
+        gameOverText3.gameObject.SetActive(true);
         StartCoroutine(BlinkingGameOverText());
-        restartLevelText.gameObject.SetActive(true);
+        restartLevelButton.gameObject.SetActive(true);
     }
     
     IEnumerator BlinkingGameOverText()
     {
         while (true)
         {
-            gameOverText.text = "GAME OVER";
-            yield return new WaitForSeconds(0.5f);
+            gameOverText3.text = "";
+            gameOverText2.text = "";
+            gameOverText.text = "game over";
+            yield return new WaitForSeconds(0.15f);
+            gameOverText3.text = "";
+            gameOverText2.text = "game over";
             gameOverText.text = "";
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.15f);
+            gameOverText3.text = "game over";
+            gameOverText2.text = "";
+            gameOverText.text = "";
+            yield return new WaitForSeconds(0.15f);
+            gameOverText3.text = "";
+            gameOverText2.text = "game over";
+            gameOverText.text = "";
+            yield return new WaitForSeconds(0.15f);
+
         }
     }
 }

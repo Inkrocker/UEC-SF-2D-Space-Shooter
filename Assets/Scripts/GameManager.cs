@@ -2,18 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private bool _isGameOver;
 
+    [SerializeField]
+    private GameObject _restartLevelButton;
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && _isGameOver == true)
+        if (_isGameOver == true)
         {
-            SceneManager.LoadScene(1); //Current Game Scene
+            _restartLevelButton.SetActive(true);
         }
+    }
+
+    public void OnClickRestart(string game)
+    {
+        SceneManager.LoadScene(game); //Current Game Scene
     }
 
     public void GameOver()

@@ -9,7 +9,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField]
     private GameObject _pausePanelPrefab;
 
-    private static bool gameIsPaused;
+    public static bool gameIsPaused;
 
     private void Update()
     {
@@ -21,7 +21,7 @@ public class PauseManager : MonoBehaviour
             PauseTheGame();
         }
 
-        GoMainMenuOrQuitGame();
+        GoMainMenu();
         QuitGame();
     }
 
@@ -38,7 +38,7 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    void GoMainMenuOrQuitGame()
+    void GoMainMenu()
     {
         if (Time.timeScale == 0)
         {
