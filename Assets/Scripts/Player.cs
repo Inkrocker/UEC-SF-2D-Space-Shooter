@@ -10,9 +10,14 @@ public class Player : MonoBehaviour
     private GameObject _laserPrefab;
 
     [SerializeField]
+    private GameObject _doubleShotPrefab;
+
+    [SerializeField]
     private GameObject _tripleShotPrefab;
 
     private float _fireRate = 0.2f;
+
+    private float _doubleFireRate = 0.175f;
 
     private float _tripleFireFate = 0.05f;
 
@@ -25,6 +30,8 @@ public class Player : MonoBehaviour
     private float _speed = 5;
 
     private SpawnManager _spawnManager;
+
+    public bool isDoubleShotActive = false;
 
     public bool isTripleShotActive = false;
 
@@ -196,6 +203,12 @@ public class Player : MonoBehaviour
             _canFire = Time.time + _tripleFireFate;
             Instantiate(_tripleShotPrefab, transform.position, Quaternion.identity);
         }
+
+        else if(isDoubleShotActive == true)
+        {
+            _canFire = Time.time + _doubleFireRate;
+            Instantiate(_doubleShotPrefab, transform.position, Quaternion.identity);
+        }
         
         else
         {
@@ -254,15 +267,27 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void DoubleShotActive()
+    {
+        isDoubleShotActive = true;
+        StartCoroutine(DoubleShotPowerDownRoutine());
+    }
+
     public void TripleShotActive()
     {
         isTripleShotActive = true;
         StartCoroutine(TripleShotPowerDownRoutine());
     }
 
+    IEnumerator DoubleShotPowerDownRoutine()
+    {
+        yield return new WaitForSeconds(7f);
+        isDoubleShotActive = false;
+    }
+
     IEnumerator TripleShotPowerDownRoutine()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(6f);
         isTripleShotActive = false;
     }
 
@@ -278,7 +303,7 @@ public class Player : MonoBehaviour
 
     IEnumerator SpeedBoostPowerDownRoutine()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(6f);
         isSpeedBoostActive = false;
         _speed = 5;
     }

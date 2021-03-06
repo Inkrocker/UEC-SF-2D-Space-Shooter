@@ -32,6 +32,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameManager _gameManager;
 
+    [SerializeField]
+    private GameObject _pauseButton;
+
     private Player _player;
 
     private void Start()

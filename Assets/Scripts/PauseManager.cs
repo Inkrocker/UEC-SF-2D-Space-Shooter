@@ -7,57 +7,30 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _pausePanelPrefab;
-
-    public static bool gameIsPaused;
+    private GameObject _inGameOptions;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            _pausePanelPrefab.SetActive(!_pausePanelPrefab.gameObject.activeSelf);
-
-            gameIsPaused = !gameIsPaused;
-            PauseTheGame();
-        }
-
-        GoMainMenu();
         QuitGame();
     }
 
-    void PauseTheGame()
+    public void PauseTheGame()
     {
-        if (gameIsPaused)
-        {
-            Time.timeScale = 0;
-        }
+        Time.timeScale = 0;
+    }
 
-        else
-        {
+    public void ResumeTheGame()
+    {
             Time.timeScale = 1;
-        }
     }
 
-    void GoMainMenu()
+    public void GoMainMenu(string Main_Menu)
     {
-        if (Time.timeScale == 0)
-        {
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                gameIsPaused = !gameIsPaused;
-                SceneManager.LoadScene("Main_Menu"); // Return to Main Menu
-            }
-        }
+        SceneManager.LoadScene(Main_Menu); // Return to Main Menu
     }
 
-    void QuitGame()
+    public void QuitGame()
     {
-        if(Time.timeScale == 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Application.Quit();
-            }
-        }
+        Application.Quit();
     }
 }

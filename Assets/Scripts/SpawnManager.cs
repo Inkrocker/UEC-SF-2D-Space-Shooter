@@ -37,7 +37,7 @@ public class SpawnManager : MonoBehaviour
     {
         while (_stopSpawning == false)
         {
-            yield return new WaitForSeconds(15);
+            yield return new WaitForSeconds(13);
             for (int i = 0; i < _enemyAsteroidPrefab.Length; i++)
             {
                 Vector3 placeSpawningAsteroids = new Vector3(0, Random.Range(-4.5f, 9.6f), 0);
@@ -51,11 +51,11 @@ public class SpawnManager : MonoBehaviour
     {
         while (_stopSpawning == false)
         {
-            yield return new WaitForSeconds(20);
+            yield return new WaitForSeconds(21);
             for (int i = 0; i < _enemyAsteroidPrefab.Length; i++)
             {
                 Vector3 placeSpawningAsteroids = new Vector3(0, Random.Range(-4.5f, 9.6f), 0);
-                Instantiate(_enemyAsteroidPrefab[i], placeSpawningAsteroids, Quaternion.Euler(0, 0, -60));
+                Instantiate(_enemyAsteroidPrefab[i], placeSpawningAsteroids, Quaternion.Euler(0, 0, -70));
                 yield return new WaitForSeconds(2.25f);
             }
         }
@@ -89,9 +89,9 @@ public class SpawnManager : MonoBehaviour
         {
             yield return new WaitForSeconds(3);
             Vector3 posToSpawnPowerUp = new Vector3(Random.Range(-4.0f, 4.25f), 11, 0);
-            int randomPowerUp = Random.Range(0, 3);
+            int randomPowerUp = Random.Range(0, 4);
             Instantiate(_powerUpPrefabs[randomPowerUp], posToSpawnPowerUp, Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range (2.5f, 6));
+            yield return new WaitForSeconds(Random.Range (3, 7f));
         }
     }
 
@@ -102,7 +102,7 @@ public class SpawnManager : MonoBehaviour
             yield return new WaitForSeconds(15);
             Vector3 posToSpawnLifeUp = new Vector3(Random.Range(-4.0f, 4.25f), 11, 0);
             Instantiate(_lifeUpPrefab, posToSpawnLifeUp, Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range(15, 21));
+            yield return new WaitForSeconds(Random.Range(15, 31));
         }
     }
 

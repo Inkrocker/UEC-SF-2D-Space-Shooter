@@ -57,6 +57,9 @@ public class PowerUps : MonoBehaviour
                     case 3:
                         player.LifeUpActive();
                         break;
+                    case 4:
+                        player.DoubleShotActive();
+                        break;
                     default:
                         Debug.Log("Default value");
                         break;
