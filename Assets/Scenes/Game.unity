@@ -179,11 +179,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'speed boost:'
+  m_Text: 'iOniC BOOST:'
 --- !u!222 &16982107
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -469,7 +469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 142.8, y: 7.6}
+  m_AnchoredPosition: {x: 134.7, y: -2.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96203452
@@ -492,8 +492,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 12
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -504,9 +504,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'horizontal & vertical
-
-    player movement.'
+  m_Text: HORiZOnTAL/VeRTiCAL PLAYeR MOVeMenT.
 --- !u!222 &96203453
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -704,7 +702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.84, y: -27.600555}
+  m_AnchoredPosition: {x: 86.84, y: -30.8}
   m_SizeDelta: {x: 274.7496, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117621474
@@ -727,8 +725,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 12
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -739,11 +737,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'temporarily increase the performance of your space fighter with double
-    the speed to outmaneuver enemy targets.
+  m_Text: 'inCReASe THe SPeeD OF YOUR SPACe FiGHTeR''s iOn THRUSTeRS FOR A SHORT
+    TiMe.
 
 
-    cooldown: 6 seconds.'
+    THe inCReASeD PeRFORMAnCe iMPROVeS MAneUVeRABiLiTY WHiLe in COMBAT.
+
+
+    COOLDOWn
+    DURATiOn: 6 SeCOnDS.'
 --- !u!222 &117621475
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1013,11 +1015,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1025,7 +1027,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'double shot:'
+  m_Text: 'DOUBLe SHOT:'
 --- !u!222 &167988740
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1338,7 +1340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 91.4, y: -34.5}
+  m_AnchoredPosition: {x: 82.7, y: -34.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &203950011
@@ -1361,8 +1363,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 12
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1373,7 +1375,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: fire laser weapons.
+  m_Text: FiRe LASeR WeAPOnS.
 --- !u!222 &203950012
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1721,8 +1723,8 @@ RectTransform:
   m_Father: {fileID: 583496068}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.74458385}
-  m_AnchorMax: {x: 1, y: 0.9832617}
+  m_AnchorMin: {x: 0, y: 0.7517112}
+  m_AnchorMax: {x: 1, y: 0.990389}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1794,11 +1796,11 @@ RectTransform:
   m_Children:
   - {fileID: 167988738}
   m_Father: {fileID: 1124177097}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -60.399857, y: -53.60083}
+  m_AnchoredPosition: {x: -60.399857, y: -483.60162}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372863833
@@ -2003,8 +2005,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4, y: 101}
-  m_SizeDelta: {x: 715.49713, y: 57.018097}
+  m_AnchoredPosition: {x: 2.5, y: 110.7}
+  m_SizeDelta: {x: 210.33173, y: 23.928566}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &431769616
 MonoBehaviour:
@@ -2026,7 +2028,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
+    m_Font: {fileID: 12800000, guid: 8458c6f1e41dd424fa4d21cad0bb714d, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -2038,9 +2040,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'uec-sf manual
-
-'
+  m_Text: game maNual
 --- !u!222 &431769617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2158,11 +2158,11 @@ RectTransform:
   m_Children:
   - {fileID: 16982105}
   m_Father: {fileID: 1124177097}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -60.40016, y: -265.2009}
+  m_AnchoredPosition: {x: -60.40016, y: -323.2}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492782997
@@ -2201,6 +2201,80 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492782995}
+  m_CullTransparentMesh: 0
+--- !u!1 &519195964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519195965}
+  - component: {fileID: 519195967}
+  - component: {fileID: 519195966}
+  m_Layer: 5
+  m_Name: RULER SPACER1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &519195965
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519195964}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 631709044}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -60.7, y: -126.79996}
+  m_SizeDelta: {x: 100, y: 25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &519195966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519195964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &519195967
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519195964}
   m_CullTransparentMesh: 0
 --- !u!1 &525042051
 GameObject:
@@ -2311,11 +2385,11 @@ RectTransform:
   m_Children:
   - {fileID: 1210424779}
   m_Father: {fileID: 1124177097}
-  m_RootOrder: 1
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -60.40016, y: -159.00076}
+  m_AnchoredPosition: {x: -60.40016, y: -586.1016}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &528575926
@@ -2698,6 +2772,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 519195965}
+  - {fileID: 1812097385}
   - {fileID: 667467210}
   - {fileID: 1124177097}
   m_Father: {fileID: 1605408942}
@@ -2705,7 +2781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -337}
+  m_AnchoredPosition: {x: 0.69999695, y: -343.6}
   m_SizeDelta: {x: 0, y: 705}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &631709045
@@ -2959,11 +3035,11 @@ RectTransform:
   m_Children:
   - {fileID: 729732894}
   m_Father: {fileID: 631709044}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.6699066, y: 435.76065}
+  m_AnchoredPosition: {x: 2.6699066, y: 424.2998}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667467211
@@ -2986,7 +3062,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
+    m_Font: {fileID: 12800000, guid: 8458c6f1e41dd424fa4d21cad0bb714d, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -3043,7 +3119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -111.7, y: -51.600006}
+  m_AnchoredPosition: {x: -111.7, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &729732895
@@ -3141,8 +3217,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -3153,7 +3229,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'aura shield:'
+  m_Text: 'AURA SHieLD:'
 --- !u!222 &804549446
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3312,11 +3388,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3324,7 +3400,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'life repair kit:'
+  m_Text: 'LiFe RePAiR KiT:'
 --- !u!222 &871861895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3464,8 +3540,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 12800000, guid: 8458c6f1e41dd424fa4d21cad0bb714d, type: 3}
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4184,11 +4260,11 @@ RectTransform:
   m_Children:
   - {fileID: 804549444}
   m_Father: {fileID: 1124177097}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -60.40016, y: -361.2008}
+  m_AnchoredPosition: {x: -60.40016, y: -207.40001}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1093171923
@@ -4602,19 +4678,21 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1494030889}
+  - {fileID: 1134907699}
+  - {fileID: 1093171922}
+  - {fileID: 492782996}
+  - {fileID: 2058118896}
   - {fileID: 372863832}
   - {fileID: 528575925}
-  - {fileID: 492782996}
-  - {fileID: 1093171922}
-  - {fileID: 1134907699}
   - {fileID: 1991123266}
   - {fileID: 1692858423}
   m_Father: {fileID: 631709044}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 306.96085}
+  m_AnchoredPosition: {x: 0, y: 314.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1124177098
@@ -4637,7 +4715,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
+    m_Font: {fileID: 12800000, guid: 8458c6f1e41dd424fa4d21cad0bb714d, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -4647,9 +4725,9 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'power-ups:'
+  m_Text: 'poWer-ups:'
 --- !u!222 &1124177099
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4689,11 +4767,11 @@ RectTransform:
   m_Children:
   - {fileID: 871861893}
   m_Father: {fileID: 1124177097}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -60.40016, y: -457.20035}
+  m_AnchoredPosition: {x: -60.40016, y: -93.3}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1134907700
@@ -4860,11 +4938,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -4872,7 +4950,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Triple Shot:'
+  m_Text: 'TRiPLe SHOT:'
 --- !u!222 &1210424781
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5184,7 +5262,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 356515144}
   m_HandleRect: {fileID: 356515143}
   m_Direction: 2
-  m_Value: 0.97801423
+  m_Value: 0.9873759
   m_Size: 0.23867783
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5936,7 +6014,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.84, y: -27.600555}
+  m_AnchoredPosition: {x: 86.84, y: -30.8}
   m_SizeDelta: {x: 274.7496, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480729688
@@ -5959,8 +6037,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 12
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -5971,11 +6049,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'offers reliable protection capable of absorbing up to 3 hits from enemy
-    targets & environmental hazards.
+  m_Text: 'OFFeRS ReLiABLe PROTeCTiOn CAPABLe OF ABSORBinG UP TO 3 HiTS FROM eneMY
+    TARGeTS & enViROnMenTAL HAZARDS.
 
 
-    no cooldown & consumed upon contact.'
+    COOLDOWn DURATiOn: 0 SeCOnDS.
+
+    COnSUMeD
+    UPOn COnTACT.'
 --- !u!222 &1480729689
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5983,6 +6064,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480729686}
+  m_CullTransparentMesh: 0
+--- !u!1 &1494030888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1494030889}
+  - component: {fileID: 1494030891}
+  - component: {fileID: 1494030890}
+  m_Layer: 5
+  m_Name: Defensive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1494030889
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494030888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1124177097}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -117, y: -35.900005}
+  m_SizeDelta: {x: 79.32965, y: 12.462967}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1494030890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494030888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.28235295, g: 0.81568635, b: 0.9333334, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8458c6f1e41dd424fa4d21cad0bb714d, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 2
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 61
+    m_Alignment: 0
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: DefeNsive
+--- !u!222 &1494030891
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494030888}
   m_CullTransparentMesh: 0
 --- !u!1 &1538898813
 GameObject:
@@ -6222,8 +6381,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.66639304, y: 102.7}
-  m_SizeDelta: {x: 715.49713, y: 57.018097}
+  m_AnchoredPosition: {x: 0.79, y: 112.51001}
+  m_SizeDelta: {x: 210.33173, y: 23.928566}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1561886635
 MonoBehaviour:
@@ -6245,7 +6404,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
+    m_Font: {fileID: 12800000, guid: 8458c6f1e41dd424fa4d21cad0bb714d, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -6257,9 +6416,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'uec-sf manual
-
-'
+  m_Text: game maNual
 --- !u!222 &1561886636
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6302,7 +6459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.84, y: -27.600555}
+  m_AnchoredPosition: {x: 86.84, y: -31.3}
   m_SizeDelta: {x: 274.7496, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1569348517
@@ -6325,8 +6482,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 12
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -6337,12 +6494,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'fires a cone-shaped laser attack from 2 weapon cannons on the front of
-    your space fighter to take out any threat above & below your location.
+  m_Text: 'TAke OUT THReATS FROM ABOVe & BeLOW WiTH A COne-SHAPeD LASeR ATTACk FROM
+    2 WeAPOn CAnnOnS On THe FROnT OF YOUR SPACe FiGHTeR.
 
 
-    cooldown:
-    7 seconds.'
+    COOLDOWn DURATiOn:
+    7 SeCOnDS.'
 --- !u!222 &1569348518
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6781,11 +6938,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1124177097}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -60.399994, y: -649.2013}
+  m_AnchoredPosition: {x: -60.399994, y: -777.3007}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1692858424
@@ -7302,6 +7459,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797968716}
   m_CullTransparentMesh: 0
+--- !u!1 &1812097384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812097385}
+  - component: {fileID: 1812097387}
+  - component: {fileID: 1812097386}
+  m_Layer: 5
+  m_Name: RULER SPACER2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1812097385
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812097384}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 631709044}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -60.7, y: -227.5}
+  m_SizeDelta: {x: 100, y: 12.49015}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1812097386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812097384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.753687, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1812097387
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812097384}
+  m_CullTransparentMesh: 0
 --- !u!1 &1863962789 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7548191738997820786, guid: bd5bac6b325e1ba4ea48828bad8e480f,
@@ -7384,8 +7615,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 12800000, guid: 8458c6f1e41dd424fa4d21cad0bb714d, type: 3}
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -7631,7 +7862,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1969506704}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1696816217}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1969506704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7740,7 +7982,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8458c6f1e41dd424fa4d21cad0bb714d, type: 3}
-    m_FontSize: 18
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -7790,11 +8032,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1124177097}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -60.40016, y: -553.2006}
+  m_AnchoredPosition: {x: -60.40016, y: -681.3}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1991123267
@@ -8073,6 +8315,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056998611}
   m_CullTransparentMesh: 0
+--- !u!1 &2058118895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058118896}
+  - component: {fileID: 2058118898}
+  - component: {fileID: 2058118897}
+  m_Layer: 5
+  m_Name: Offensive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2058118896
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058118895}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1124177097}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -77.2, y: -434.80002}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2058118897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058118895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.28235295, g: 0.81568635, b: 0.9333334, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8458c6f1e41dd424fa4d21cad0bb714d, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 2
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: offensive
+--- !u!222 &2058118898
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058118895}
+  m_CullTransparentMesh: 0
 --- !u!1 &2085051676
 GameObject:
   m_ObjectHideFlags: 0
@@ -8131,7 +8451,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8458c6f1e41dd424fa4d21cad0bb714d, type: 3}
-    m_FontSize: 18
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -8259,7 +8579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.84, y: -27.600555}
+  m_AnchoredPosition: {x: 86.84, y: -30.3}
   m_SizeDelta: {x: 274.7496, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124304314
@@ -8282,8 +8602,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 12
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -8294,13 +8614,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'this restores 1 life per kit absorbed & removes 1 burning flame instantly
-    from your space fighter while in combt.
+  m_Text: 'ReSTOReS 1 LiFe PeR KiT ABSORBeD.
+
+    inSTAnTLY ReMOVeS 1 BURninG FLAMe
+    FROM YOUR SPACe FiGHTeR WHiLe in COMBAT.
 
 
-    no cooldown & consumed upon contact.
+    COOLDOWn DURATiOn: 0 seconds.
 
-'
+    COnSUMeD
+    UPOn COnTACT.'
 --- !u!222 &2124304315
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8688,7 +9011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.84, y: -27.600555}
+  m_AnchoredPosition: {x: 86.84, y: -30.3}
   m_SizeDelta: {x: 274.7496, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2141432065
@@ -8711,8 +9034,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: d4d4160ba3148de4c90ad98939e7ca2b, type: 3}
-    m_FontSize: 12
+    m_Font: {fileID: 12800000, guid: e4f5643aaf5ba7b44b48637f873578c8, type: 3}
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -8723,11 +9046,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'unleashes a rapid laser barrage from 3 weapon cannons on your space fighter
-    to decimate enemy targets & space debris.
+  m_Text: 'DeCiMATe eneMY TARGeTS & AnY enViROnMenTAL HAZARD WiTH A RAPiD LASeR BARRAGe
+    FROM 3 WeAPOn CAnnOnS On YOUR SPACe FiGHTeR.
 
 
-    cooldown: 5 seconds.'
+    COOLDOWn DURATiOn: 5 SeCOnDS.'
 --- !u!222 &2141432066
 CanvasRenderer:
   m_ObjectHideFlags: 0
