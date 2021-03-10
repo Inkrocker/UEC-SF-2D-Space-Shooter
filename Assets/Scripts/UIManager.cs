@@ -15,13 +15,28 @@ public class UIManager : MonoBehaviour
     private Image _livesImage;
 
     [SerializeField]
+    private GameObject _doubleShotHUDPrefab;
+
+    [SerializeField]
+    private GameObject _doubleShotOffHUDPrefab;
+
+    [SerializeField]
     private GameObject _tripleShotHUDPrefab;
+
+    [SerializeField]
+    private GameObject _tripleShotOffHUDPrefab;
 
     [SerializeField]
     private GameObject _speedBoostHUDPrefab;
 
     [SerializeField]
+    private GameObject _speedboostOffHUDPrefab;
+
+    [SerializeField]
     private GameObject _shieldsHUDPrefab;
+
+    [SerializeField]
+    private GameObject _shieldsOffHUDPrefab;
 
     [SerializeField]
     private Text gameOverText, gameOverText2, gameOverText3;
@@ -58,6 +73,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
+        DoubleShotHUDActive();
         TripleShotHUDActive();
         SpeedBoostHUDActive();
         ShieldsHUDActive();
@@ -86,16 +102,33 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void DoubleShotHUDActive()
+    {
+        if (_player.isDoubleShotActive == true)
+        {
+            _doubleShotHUDPrefab.SetActive(true);
+            _doubleShotOffHUDPrefab.SetActive(false);
+        }
+
+        else if (_player.isDoubleShotActive != true)
+        {
+            _doubleShotHUDPrefab.SetActive(false);
+            _doubleShotOffHUDPrefab.SetActive(true);
+        }
+    }
+
     private void TripleShotHUDActive()
     {
         if (_player.isTripleShotActive == true)
         {
             _tripleShotHUDPrefab.SetActive(true);
+            _tripleShotOffHUDPrefab.SetActive(false);
         }
 
         else if (_player.isTripleShotActive != true)
         {
             _tripleShotHUDPrefab.SetActive(false);
+            _tripleShotOffHUDPrefab.SetActive(true);
         }
     }
 
@@ -104,11 +137,13 @@ public class UIManager : MonoBehaviour
         if(_player.isSpeedBoostActive == true)
         {
             _speedBoostHUDPrefab.SetActive(true);
+            _speedboostOffHUDPrefab.SetActive(false);
         }
 
         else if (_player.isSpeedBoostActive != true)
         {
             _speedBoostHUDPrefab.SetActive(false);
+            _speedboostOffHUDPrefab.SetActive(true);
         }
     }
 
@@ -117,11 +152,13 @@ public class UIManager : MonoBehaviour
        if (_player.isShieldsActive == true)
        {
            _shieldsHUDPrefab.SetActive(true);
+            _shieldsOffHUDPrefab.SetActive(false);
        }
    
        else if(_player.isShieldsActive != true)
         {
             _shieldsHUDPrefab.SetActive(false);
+            _shieldsOffHUDPrefab.SetActive(true);
         }
    }
 
