@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class EnemyAsteroid_Explosion : MonoBehaviour
 {
-    private void Update()
+    private AudioSource _audioSource;
+
+    private void Start()
     {
-        DestroyAsteroid();
+        _audioSource = GetComponent<AudioSource>();
+        if (_audioSource == null)
+        {
+            Debug.LogError("The Asteroid AudioSource is NULL!");
+        }
+        AudioclipExplosion();
     }
 
-    private void DestroyAsteroid()
+    private void AudioclipExplosion()
     {
-        Destroy(this.gameObject, 1.0f);
+        Destroy(this.gameObject, 2f);
+        _audioSource.Play();
     }
 }

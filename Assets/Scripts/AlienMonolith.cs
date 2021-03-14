@@ -45,15 +45,10 @@ public class AlienMonolith : MonoBehaviour
                 _spawnManager.StartSpawning();
                 Destroy(GetComponent<Collider2D>());
                 Destroy(this.gameObject, 0.3f);
+                StartCoroutine(AddPoints());
                 Vector3 SpawnMonolithExplosion = new Vector3(transform.position.x, transform.position.y, 0.0f);
                 Instantiate(_monolithExplosionPrefab, SpawnMonolithExplosion, Quaternion.identity);
-            }
-
-            if(_player != null)
-            {
-                _player.AddToScore(5);
-            }
-           
+            }           
         }
 
         if (other.CompareTag("Player"))
@@ -65,6 +60,12 @@ public class AlienMonolith : MonoBehaviour
                 player.Damage();
             }
         }
+    }
+
+    IEnumerator AddPoints()
+    {
+        _player.AddToScore(100);
+        yield return new WaitForSeconds(0.2f);
     }
 
     public IEnumerator FlashRed()

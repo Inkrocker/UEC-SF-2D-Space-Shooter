@@ -4,27 +4,29 @@ using UnityEngine;
 
 public class EnemyAsteroid : MonoBehaviour
 {
-    private float _asteroidSpeed;
+    //private float _asteroidSpeed;
 
     [SerializeField]
-    GameObject _explosionPrefab;
+    private float _asteroidRotSpeed;
+
+    [SerializeField]
+    private GameObject _explosionPrefab;
 
     private Player _player;
 
     public SpriteRenderer _spriteFlashColor;
 
-    private int _asteroidHealth = 5;
+    [SerializeField]
+    private int _asteroidHealth;
 
-    private AudioSource _audioSource;
+    [SerializeField]
+    private int _pointsAwarded;
 
     private void Start()
     {
-        _asteroidSpeed = Random.Range(0.75f, 2.0f);
-        transform.position = new Vector3(Random.Range(0.0f, 9.6f), 6.0f, 0.0f);
+        transform.position = new Vector3(Random.Range(0.0f, 9.6f), 7.35f, 0.0f);
+
         _player = GameObject.Find("Player").GetComponent<Player>();
-        _audioSource = GetComponent<AudioSource>();
-
-
         if (_player == null)
         {
             Debug.LogError("The Player is NULL!");
@@ -34,19 +36,22 @@ public class EnemyAsteroid : MonoBehaviour
     private void Update()
     {
         AsteroidMovement();
+        AsteroidRotation();
     }
 
     public void AsteroidMovement()
     {
-        transform.Translate(_asteroidSpeed * Vector3.down * Time.deltaTime);
-
-        if(transform.position.y <= -4.2f)
+        if (transform.position.y <= -4.2f)
         {
-            _asteroidSpeed = 0;
             Destroy(this.gameObject);
-            Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y, 0);
+            Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y);
             Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
         }
+    }
+
+    public void AsteroidRotation()
+    {
+        transform.Rotate(0, 0, 3f * _asteroidRotSpeed * Time.deltaTime, Space.Self);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -59,9 +64,8 @@ public class EnemyAsteroid : MonoBehaviour
             {
                 player.Damage();
             }
-            _asteroidSpeed = 0;
-            _audioSource.Play();
             Destroy(this.gameObject);
+          //  _audioSource.Play();
             Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y, 0);
             Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
         }
@@ -73,17 +77,23 @@ public class EnemyAsteroid : MonoBehaviour
             _asteroidHealth--;
             StartCoroutine(FlashAsteroidRed());
 
+
             if (_asteroidHealth == 0 && _player != null)
             {
-                _player.AddToScore(25);
-                _asteroidSpeed = 0;
-                _audioSource.Play();
                 Destroy(GetComponent<Collider2D>());
+                Destroy(GetComponent<Rigidbody2D>());
                 Destroy(this.gameObject);
+                StartCoroutine(AddPoints());
                 Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y, 0);
                 Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
             }
         }
+    }
+
+    IEnumerator AddPoints()
+    {
+        _player.AddToScore(_pointsAwarded);
+        yield return new WaitForSeconds(0.2f);
     }
 
     IEnumerator FlashAsteroidRed()

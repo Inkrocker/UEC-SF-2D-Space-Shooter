@@ -20,16 +20,20 @@ public class Enemy01 : MonoBehaviour
     {
         _enemy01Speed = Random.Range(2.25f, 3.5f);
         transform.position = new Vector3(11.0f, Random.Range (-4.0f, 4.25f), 0.0f);
-        _player = GameObject.Find("Player").GetComponent<Player>();
-        _audioSource = GetComponent<AudioSource>();
 
+        _audioSource = GetComponent<AudioSource>();
+        if(_audioSource == null)
+        {
+            Debug.LogError("The Enemy01 AudioSource is NULL!");
+        }
+
+        _player = GameObject.Find("Player").GetComponent<Player>();
         if (_player == null)
         {
             Debug.LogError("The Player is NULL!");
         }
 
         _enemy01_Anim = gameObject.GetComponent<Animator>();
-
         if(_enemy01_Anim == null)
         {
             Debug.LogError("The Enemy01 Animator component is NULL!");
@@ -44,7 +48,7 @@ public class Enemy01 : MonoBehaviour
     void EnemyMovement()
     {
         transform.Translate(_enemy01Speed * Vector3.left * Time.deltaTime);
-        
+
         if (transform.position.x <= -11.0f)
         {
             float randomPositionY = Random.Range(-4.0f, 4.25f);
@@ -63,10 +67,10 @@ public class Enemy01 : MonoBehaviour
             {
                 player.Damage();
             }
-            _enemy01Speed = 0;
+            _enemy01Speed = Random.Range(0.25f, 1.75f);
             _enemy01_Anim.SetTrigger("OnEnemyDeath");
             _audioSource.Play();
-            Destroy(this.gameObject, 1.3f);
+            Destroy(this.gameObject, 1.5f);
         }
 
         else if(other.tag == "Laser")
@@ -79,11 +83,11 @@ public class Enemy01 : MonoBehaviour
             if(_enemyHealth == 0 && _player != null)
             {
                 _player.AddToScore(10);
-                _enemy01Speed = 0;
+                _enemy01Speed = Random.Range(0.25f, 1.75f);
                 _enemy01_Anim.SetTrigger("OnEnemyDeath");
                 _audioSource.Play();
                 Destroy(GetComponent<Collider2D>());
-                Destroy(this.gameObject, 1.3f);
+                Destroy(this.gameObject, 1.5f);
             }
         }
     }

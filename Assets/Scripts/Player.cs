@@ -75,33 +75,31 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        transform.position = new Vector3(-6f, 0, 0);
-        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
-        _uiManager = GameObject.Find("UI_Manager").GetComponent<UIManager>();
-        _audioSource = GameObject.Find("AudioSource").GetComponent<AudioSource>();
-        
+        transform.position = new Vector3(-4f, 0, 0);
 
+        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();    
         if (_spawnManager == null)
         {
             Debug.LogError("The Spawn Manager is NULL!");
         }
 
+        _uiManager = GameObject.Find("UI_Manager").GetComponent<UIManager>();
         if (_uiManager == null)
         {
             Debug.LogError("The UI Manager is NULL!");
         }
 
         _playerAnim = GetComponent<Animator>();
-
         if(_playerAnim == null)
         {
             Debug.LogError("The Player Animator is NULL!");
         }
 
-       if(_audioSource == null)
-       {
-           Debug.LogError("The Audio Source on the Player is NULL!");
-       }
+        _audioSource = GameObject.Find("AudioSource").GetComponent<AudioSource>();
+        if (_audioSource == null)
+        {
+            Debug.LogError("The Audio Source on the Player is NULL!");
+        }
        
        else
        {
@@ -324,7 +322,7 @@ public class Player : MonoBehaviour
         if(_lives == 3)
         {
             _lives = 3;
-            Debug.Log("No change to lives");
+            // No change to lives
         }
 
         else if(_lives == 2)
@@ -332,7 +330,6 @@ public class Player : MonoBehaviour
             _lives = 3;
             _uiManager.UpdateLifeArray(_lives);
             _burnDmg01Prefab.SetActive(false);
-            Debug.Log("Lives Updated to 3");
         }
 
         else if(_lives == 1)
@@ -340,7 +337,6 @@ public class Player : MonoBehaviour
             _lives = 2;
             _uiManager.UpdateLifeArray(_lives);
             _burnDmg02Prefab.SetActive(false);
-            Debug.Log("Lives Updated to 2");
         }
     }
 
