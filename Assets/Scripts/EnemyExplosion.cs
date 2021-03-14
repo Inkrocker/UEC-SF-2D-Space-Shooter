@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAsteroid_Explosion : MonoBehaviour
+public class EnemyExplosion : MonoBehaviour
 {
     private AudioSource _audioSource;
 
@@ -11,7 +11,7 @@ public class EnemyAsteroid_Explosion : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         if (_audioSource == null)
         {
-            Debug.LogError("The Asteroid AudioSource is NULL!");
+            Debug.LogError("The AudioSource is NULL!");
         }
         AudioclipExplosion();
     }
