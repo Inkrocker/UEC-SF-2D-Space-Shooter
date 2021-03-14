@@ -94,8 +94,7 @@ public class Player : MonoBehaviour
         {
             Debug.LogError("The Player Animator is NULL!");
         }
-
-        _audioSource = GameObject.Find("AudioSource").GetComponent<AudioSource>();
+        _audioSource = GameObject.Find("Player").GetComponent<AudioSource>();
         if (_audioSource == null)
         {
             Debug.LogError("The Audio Source on the Player is NULL!");
