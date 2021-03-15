@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class EnemyAsteroid : MonoBehaviour
 {
-    //private float _asteroidSpeed;
-
-    [SerializeField]
-    private float _asteroidRotSpeed;
-
     [SerializeField]
     private GameObject _explosionPrefab;
 
@@ -36,22 +31,16 @@ public class EnemyAsteroid : MonoBehaviour
     private void Update()
     {
         AsteroidMovement();
-        AsteroidRotation();
     }
 
     public void AsteroidMovement()
     {
-        if (transform.position.y <= -4.2f)
+        if (transform.position.y <= -4.2f != transform.position.x <= -12f)
         {
             Destroy(this.gameObject);
             Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y);
             Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
         }
-    }
-
-    public void AsteroidRotation()
-    {
-        transform.Rotate(0, 0, 3f * _asteroidRotSpeed * Time.deltaTime, Space.Self);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -65,7 +54,6 @@ public class EnemyAsteroid : MonoBehaviour
                 player.Damage();
             }
             Destroy(this.gameObject);
-          //  _audioSource.Play();
             Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y, 0);
             Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
         }

@@ -18,7 +18,8 @@ public class FallAngles : MonoBehaviour
     {
         Angle();
     }
-    void Angle()
+
+    private void Angle()
     {
         transform.Translate (_angleTranslateX * _angleSpeedX * Time.deltaTime, _angleTranslateY * _angleSpeedY * Time.deltaTime, 0f, Space.World);
     }

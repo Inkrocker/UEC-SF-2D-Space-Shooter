@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyExplosion : MonoBehaviour
+public class PlayerAndEnemyExplosion : MonoBehaviour
 {
     private AudioSource _audioSource;
 

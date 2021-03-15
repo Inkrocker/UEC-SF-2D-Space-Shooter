@@ -41,7 +41,7 @@ public class SpawnManager : MonoBehaviour
             for (int i = 0; i < _enemyAsteroidPrefab.Length; i++)
             {
                 Vector3 placeSpawningAsteroids = new Vector3(0, Random.Range(-4.5f, 9.6f), 0);
-                Instantiate(_enemyAsteroidPrefab[i], placeSpawningAsteroids, Quaternion.Euler(0, 0, 30f));
+                Instantiate(_enemyAsteroidPrefab[i], placeSpawningAsteroids, Quaternion.identity);
                 yield return new WaitForSeconds(7);
             }            
         }
