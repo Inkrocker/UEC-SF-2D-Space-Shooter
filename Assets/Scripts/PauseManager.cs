@@ -11,7 +11,7 @@ public class PauseManager : MonoBehaviour
 
     private void Update()
     {
-        QuitGame();
+        //QuitGame();
     }
 
     public void PauseTheGame()
@@ -29,8 +29,8 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene(Main_Menu); // Return to Main Menu
     }
 
-    public void QuitGame()
+    /*public void QuitGame()
     {
         Application.Quit();
-    }
+    }*/
 }

@@ -16,13 +16,13 @@ PlayerSettings:
   productName: 'UNITED EARTH COMMAND: SPACE FORCE'
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0, g: 0.0028000074, b: 0.021, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0, g: 0.0113207605, b: 0.05660379, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 0
   m_SplashScreenLogoStyle: 1
-  m_SplashScreenDrawMode: 0
+  m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 0.586
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 1
@@ -41,7 +41,11 @@ PlayerSettings:
     height: 1
   m_SplashScreenLogos:
   - logo: {fileID: 21300000, guid: 3a633edbaded6574db6ff4cc7ee2adab, type: 3}
-    duration: 3
+    duration: 2
+  - logo: {fileID: 21300000, guid: a5797cd09fa6be8449aeb244a16a2f89, type: 3}
+    duration: 2
+  - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
+    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -94,8 +98,8 @@ PlayerSettings:
   xboxEnableKinectAutoTracking: 0
   xboxEnableFitness: 0
   visibleInBackground: 1
-  allowFullscreenSwitch: 0
-  fullscreenMode: 2
+  allowFullscreenSwitch: 1
+  fullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -129,7 +133,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleVersion: 0.1.1
+  bundleVersion: 0.3.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -147,9 +151,11 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Android: com.INKROCKERGAMES.UNITEDEARTHCOMMANDSPACEFORCE
+    Standalone: com.INKROCKERGAMES.UNITEDEARTHCOMMANDSPACEFORCE
   buildNumber:
-    Standalone: 0
+    Standalone: 0.3
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
@@ -165,7 +171,7 @@ PlayerSettings:
   ForceSDCardPermission: 0
   CreateWallpaper: 0
   APKExpansionFiles: 0
-  keepLoadedShadersAlive: 0
+  keepLoadedShadersAlive: 1
   StripUnusedMeshComponents: 1
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
@@ -262,7 +268,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 6ee0ee8c1374ddd4a9e624f1fee776e8, type: 3}
+      m_Icon: {fileID: 2800000, guid: a5797cd09fa6be8449aeb244a16a2f89, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -661,9 +667,10 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 0}
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 6ef43627d41317249861a3471e6f5795,
+    type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
-  blurSplashScreenBackground: 0
+  blurSplashScreenBackground: 1
   spritePackerPolicy: 
   webGLMemorySize: 16
   webGLExceptionSupport: 1
@@ -711,19 +718,25 @@ PlayerSettings:
   gcIncremental: 0
   assemblyVersionValidation: 1
   gcWBarrierValidation: 0
-  apiCompatibilityLevelPerPlatform: {}
+  apiCompatibilityLevelPerPlatform:
+    WSA: 6
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Template_3D
-  metroPackageVersion: 
+  metroPackageName: Template3D
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Template_3D
-  wsaImages: {}
-  metroTileShortName: 
+  wsaImages:
+    65636: Assets/Textures/StoreLogo50.png
+    65661: Assets/Textures/StoreLogo63.png
+    65686: Assets/Textures/StoreLogo75.png
+    65736: Assets/Textures/StoreLogo100.png
+    65936: Assets/Textures/StoreLogo200.png
+  metroTileShortName: 'UNITED EARTH COMMAND: SPACE FORCE'
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
