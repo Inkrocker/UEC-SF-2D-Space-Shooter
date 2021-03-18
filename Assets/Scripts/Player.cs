@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
 
     private int _lives = 3;
 
+    private int _bloomBombs = 0;
+
     private int _score;
 
     private float _speed = 5;
@@ -40,6 +42,8 @@ public class Player : MonoBehaviour
     public bool isShieldsActive = false;
 
     public bool isLifeUpActive = false;
+
+    public bool isBloomBombsActive = false;
 
     [SerializeField]
     private GameObject _shieldVisualPrefab;
@@ -119,6 +123,7 @@ public class Player : MonoBehaviour
         PlayerAnimDown();
     }
 
+//----------- PLAYER ANIM VECTOR UP & DOWN ----------------
     void PlayerAnimUp()
     {
         if(Input.GetKeyDown(KeyCode.W))
@@ -163,6 +168,7 @@ public class Player : MonoBehaviour
         }
     }
 
+//----------- PLAYER HORIZONTAL & VERTICAL MOVEMENT ----------------
     void PlayerMovement()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -191,6 +197,7 @@ public class Player : MonoBehaviour
         }
     }
 
+//----------- WEAPON BEHAVIOR ----------------
     void LaserShot()
     {
         var laserOffset = new Vector3(1.348f, -0.282f, 0.0f);
@@ -215,7 +222,7 @@ public class Player : MonoBehaviour
 
         _audioSource.Play();
     }
-
+//----------- PLAYER DAMAGE ----------------
     public void Damage()
     {
         if (isShieldsActive == true)
@@ -258,22 +265,30 @@ public class Player : MonoBehaviour
             Vector3 SpawnPlayerExplosion = new Vector3(transform.position.x, transform.position.y, 0.0f);
             Instantiate(_playerExplosionPrefab, SpawnPlayerExplosion, Quaternion.identity);
             _speed = 0;
-            Destroy(this.gameObject, 0.3f);
+            Destroy(this.gameObject, 0.15f);
             _spawnManager.PlayerDead();
             _uiManager.GameOverSequence();
         }
     }
 
+    IEnumerator PlayerFlashDamage()
+    {
+        _playerFlashColor.color = Color.red;
+        yield return new WaitForSeconds(0.115f);
+        _playerFlashColor.color = Color.white;
+    }
+
+    public void AddToScore(int points)
+    {
+        _score += points;
+        _uiManager.UpdatePlayerScore(_score);
+    }
+
+//----------- DOUBLE SHOT ----------------
     public void DoubleShotActive()
     {
         isDoubleShotActive = true;
         StartCoroutine(DoubleShotPowerDownRoutine());
-    }
-
-    public void TripleShotActive()
-    {
-        isTripleShotActive = true;
-        StartCoroutine(TripleShotPowerDownRoutine());
     }
 
     IEnumerator DoubleShotPowerDownRoutine()
@@ -282,12 +297,19 @@ public class Player : MonoBehaviour
         isDoubleShotActive = false;
     }
 
+//----------- TRIPLE SHOT ----------------
+    public void TripleShotActive()
+    {
+        isTripleShotActive = true;
+        StartCoroutine(TripleShotPowerDownRoutine());
+    }
+
     IEnumerator TripleShotPowerDownRoutine()
     {
         yield return new WaitForSeconds(6f);
         isTripleShotActive = false;
     }
-
+//----------- SPEED BOOST ----------------
     public void SpeedPowerUpActive()
     {
         if (isSpeedBoostActive != true)
@@ -305,6 +327,47 @@ public class Player : MonoBehaviour
         _speed = 5;
     }
 
+//----------- BLOOM BOMBS ----------------
+    public void BloomBombs()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            _bloomBombs -= 1;
+
+            _uiManager.UpdateBloomBombsArray(_bloomBombs);
+        }
+    }
+
+    public void BloomBombsActive()
+    {
+        isBloomBombsActive = true;
+
+        if (_bloomBombs == 3)
+        {
+            _bloomBombs = 3;
+            // Maximum bombs collected
+        }
+
+        else if (_bloomBombs == 2)
+        {
+            _bloomBombs = 3;
+            _uiManager.UpdateBloomBombsArray(_bloomBombs);
+        }
+
+        else if (_bloomBombs == 1)
+        {
+            _bloomBombs = 2;
+            _uiManager.UpdateBloomBombsArray(_bloomBombs);
+        }
+
+        else if (_bloomBombs == 0)
+        {
+            _bloomBombs = 1;
+            _uiManager.UpdateBloomBombsArray(_bloomBombs);
+        }
+    }
+
+//----------- PLAYER SHIELDS ----------------
     public void ShieldsActive()
     {
         isShieldsActive = true;
@@ -314,6 +377,7 @@ public class Player : MonoBehaviour
         }
     }
 
+//----------- PLAYER LIVES ----------------
     public void LifeUpActive()
     {
         isLifeUpActive = true;
@@ -339,6 +403,7 @@ public class Player : MonoBehaviour
         }
     }
 
+//----------- PLAYER BURN DAMAGE SPRITES ----------------
     public void BurnDamage()
     {
         if(_lives == 2)
@@ -357,18 +422,5 @@ public class Player : MonoBehaviour
             PlayerAnimUp();
             PlayerAnimDown();
         }
-    }
-
-    IEnumerator PlayerFlashDamage()
-    {
-        _playerFlashColor.color = Color.red;
-        yield return new WaitForSeconds(0.115f);
-        _playerFlashColor.color = Color.white;
-    }
-
-    public void AddToScore(int points)
-    {
-        _score += points;
-        _uiManager.UpdatePlayerScore(_score);
     }
 }

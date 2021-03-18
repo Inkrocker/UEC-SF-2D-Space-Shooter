@@ -19,6 +19,9 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     private GameObject _lifeUpPrefab;
 
+    [SerializeField]
+    private GameObject _bloomBombPrefab;
+
     private float RandomEnemyCount;
 
     private bool _stopSpawning = false;
@@ -31,8 +34,10 @@ public class SpawnManager : MonoBehaviour
         RandomAmountEnemy01Spawned();
         StartCoroutine(AsteroidEnemyRoutine());
         StartCoroutine(VariantAsteroidEnemyRoutine());
+        StartCoroutine(SpawnBloomBombRoutine());
     }
 
+//----------- ASTEROID SPAWNING  ----------------
     IEnumerator AsteroidEnemyRoutine()
     {
         while (_stopSpawning == false)
@@ -61,9 +66,10 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+//----------- ENEMY01 SPAWNING ----------------
     void RandomAmountEnemy01Spawned()
     {
-        RandomEnemyCount = Random.Range(5, 8);
+        RandomEnemyCount = Random.Range(3, 5);
 
         for (int i = 0; i < RandomEnemyCount; i++)
         {
@@ -83,6 +89,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+//----------- POWER-UPS SPAWNING ----------------
     IEnumerator SpawnPowerUpsRoutine()
     {
         while(_stopSpawning == false)
@@ -95,6 +102,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+//----------- LIFE REPAIR KIT SPAWNING ----------------
     IEnumerator SpawnLifeUpRarelyRoutine()
     {
         while(_stopSpawning == false)
@@ -106,6 +114,20 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+//----------- BLOOM BOMBS SPAWNING ----------------
+
+    IEnumerator SpawnBloomBombRoutine()
+    {
+        while(_stopSpawning == false)
+        {
+            yield return new WaitForSeconds(Random.Range(40, 120));
+            Vector3 posToSpawnBloomBomb = new Vector3(Random.Range(-4.0f, 4.25f), 11, 0);
+            Instantiate(_bloomBombPrefab, posToSpawnBloomBomb, Quaternion.identity);
+            yield return new WaitForSeconds(Random.Range(40, 120));
+        }
+    }
+
+//----------- STOP SPAWNING ----------------
     public void PlayerDead()
     {
         _stopSpawning = true;

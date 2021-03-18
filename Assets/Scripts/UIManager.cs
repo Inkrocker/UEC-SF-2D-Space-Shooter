@@ -10,9 +10,13 @@ public class UIManager : MonoBehaviour
 
     [SerializeField]
     private Sprite[] _livesSprites;
-
     [SerializeField]
     private Image _livesImage;
+
+    [SerializeField]
+    private Sprite[] _bloomBombSprites;
+    [SerializeField]
+    private Image _bloomBombsImage;
 
     [SerializeField]
     private GameObject _doubleShotHUDPrefab;
@@ -78,14 +82,6 @@ public class UIManager : MonoBehaviour
         SpeedBoostHUDActive();
         ShieldsHUDActive();
     }
-        
-    /*private void PauseGame()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Time.timeScale = 0;
-        }
-    }*/
 
     public void UpdatePlayerScore(int playerScore)
     {
@@ -101,6 +97,19 @@ public class UIManager : MonoBehaviour
             GameOverSequence();
         }
     }
+
+    public void UpdateBloomBombsArray(int currentBloomBombs)
+    {
+        _bloomBombsImage.sprite = _bloomBombSprites[currentBloomBombs];
+
+        if(Input.GetKeyDown(KeyCode.B) && currentBloomBombs < 1)
+        {
+            currentBloomBombs = 0;
+            Debug.Log("BLOOM BOMBS DEPLETED");
+        }
+    }
+
+//----------- POWER-UPS HUD ICONS ----------------
 
     private void DoubleShotHUDActive()
     {
@@ -162,6 +171,7 @@ public class UIManager : MonoBehaviour
         }
    }
 
+//----------- IN-GAME "GAME OVER" MESSAGE ----------------
     public void GameOverSequence()
     {
         _gameManager.GameOver();
