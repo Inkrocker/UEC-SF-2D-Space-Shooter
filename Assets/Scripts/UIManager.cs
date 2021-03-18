@@ -61,15 +61,15 @@ public class UIManager : MonoBehaviour
         _scoreText.text = "" + 0;
         gameOverText.gameObject.SetActive(false);
         restartLevelButton.gameObject.SetActive(false);
-        _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
-        _player = GameObject.Find("Player").GetComponent<Player>();
 
+        _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         if(_gameManager == null)
         {
             Debug.LogError("The Game Manager is NULL!");
         }
-
-        if(_player == null)
+        
+        _player = GameObject.Find("Player").GetComponent<Player>();
+        if (_player == null)
         {
             Debug.LogError("The Player is NULL!");
         }
@@ -83,6 +83,7 @@ public class UIManager : MonoBehaviour
         ShieldsHUDActive();
     }
 
+//----------- SCORE / LIVES / BLOOM BOMBS HUD ICONS UPDATE ----------------
     public void UpdatePlayerScore(int playerScore)
     {
         _scoreText.text = "" + playerScore.ToString();
@@ -109,8 +110,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-//----------- POWER-UPS HUD ICONS ----------------
-
+//----------- POWER-UPS HUD ICONS UPDATE ----------------
     private void DoubleShotHUDActive()
     {
         if (_player.isDoubleShotActive == true)
@@ -171,7 +171,8 @@ public class UIManager : MonoBehaviour
         }
    }
 
-//----------- IN-GAME "GAME OVER" MESSAGE ----------------
+//----------- IN-GAME "GAME OVER" TEXT ----------------
+//----------- APPEARS UPON PLAYER DEATH ---------------
     public void GameOverSequence()
     {
         _gameManager.GameOver();

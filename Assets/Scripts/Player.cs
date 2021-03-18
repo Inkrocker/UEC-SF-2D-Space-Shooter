@@ -121,6 +121,7 @@ public class Player : MonoBehaviour
 
         PlayerAnimUp();
         PlayerAnimDown();
+        BloomBombs();
     }
 
 //----------- PLAYER ANIM VECTOR UP & DOWN ----------------
@@ -327,6 +328,16 @@ public class Player : MonoBehaviour
         _speed = 5;
     }
 
+//----------- PLAYER SHIELDS ----------------
+    public void ShieldsActive()
+    {
+        isShieldsActive = true;
+        if (_shieldStrength == 3)
+        {
+            _shieldVisualPrefab.SetActive(true);
+        }
+    }
+
 //----------- BLOOM BOMBS ----------------
     public void BloomBombs()
     {
@@ -364,16 +375,6 @@ public class Player : MonoBehaviour
         {
             _bloomBombs = 1;
             _uiManager.UpdateBloomBombsArray(_bloomBombs);
-        }
-    }
-
-//----------- PLAYER SHIELDS ----------------
-    public void ShieldsActive()
-    {
-        isShieldsActive = true;
-        if(_shieldStrength == 3)
-        {
-            _shieldVisualPrefab.SetActive(true);
         }
     }
 
