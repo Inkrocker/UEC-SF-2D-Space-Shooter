@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
     private int _lives = 3;
 
-    private int _bloomBombs = 0;
+    public int _bloomBombs = 0;
 
     private int _score;
 
@@ -48,7 +48,9 @@ public class Player : MonoBehaviour
 
     public bool isLifeUpActive = false;
 
-    public bool isBloomBombsActive = false;
+    public bool isBloomBombsHUDActive = false;
+
+    public bool isBloomBombWeaponActive = false;
 
     [SerializeField]
     private GameObject _shieldVisualPrefab;
@@ -126,7 +128,7 @@ public class Player : MonoBehaviour
 
         PlayerAnimUp();
         PlayerAnimDown();
-        BloomBombs();
+        BloomBombsInput();
     }
 
 //----------- PLAYER ANIM VECTOR UP & DOWN ----------------
@@ -233,7 +235,7 @@ public class Player : MonoBehaviour
     {
         var bloomBombOffset = new Vector3(0.205f, -0.533f, 0);
 
-        if (isBloomBombsActive == true)
+        if (isBloomBombWeaponActive == true)
         {
             _canFire = Time.deltaTime + _bloomBombFireRate;
             Instantiate(_bloomBombPrefab, transform.position + bloomBombOffset, Quaternion.Euler(0, 0, -70));
@@ -356,42 +358,54 @@ public class Player : MonoBehaviour
     }
 
 //----------- BLOOM BOMBS ----------------
-    public void BloomBombs()
+    public void BloomBombsInput()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.B) && _bloomBombs > 0)
         {
             _bloomBombs -= 1;
-            _uiManager.UpdateBloomBombsArray(_bloomBombs);
+            _uiManager.UpdateBloomBombsHUDArray(_bloomBombs);
             BloomBombShot();
+        }
+
+        else if(_bloomBombs == 0)
+        {
+            isBloomBombWeaponActive = false;
+            _bloomBombs = 0;
+        }
+
+        else if(_bloomBombs > 0)
+        {
+            isBloomBombWeaponActive = true;
         }
     }
 
     public void BloomBombsActive()
     {
-        isBloomBombsActive = true;
-
-        if (_bloomBombs == 3)
+        if (_bloomBombs == 0)
         {
-            _bloomBombs = 3;
-            // Maximum bombs collected
-        }
+            isBloomBombsHUDActive = true;
+            isBloomBombWeaponActive = false;
 
-        else if (_bloomBombs == 2)
-        {
-            _bloomBombs = 3;
-            _uiManager.UpdateBloomBombsArray(_bloomBombs);
+            _bloomBombs = 1;
+            _uiManager.UpdateBloomBombsHUDArray(_bloomBombs);
         }
 
         else if (_bloomBombs == 1)
         {
             _bloomBombs = 2;
-            _uiManager.UpdateBloomBombsArray(_bloomBombs);
+            _uiManager.UpdateBloomBombsHUDArray(_bloomBombs);
         }
 
-        else if (_bloomBombs == 0)
+        else if (_bloomBombs == 2)
         {
-            _bloomBombs = 1;
-            _uiManager.UpdateBloomBombsArray(_bloomBombs);
+            _bloomBombs = 3;
+            _uiManager.UpdateBloomBombsHUDArray(_bloomBombs);
+        }
+
+        else if (_bloomBombs == 3)
+        {
+            _bloomBombs = 3;
+            // Maximum bombs collected
         }
     }
 

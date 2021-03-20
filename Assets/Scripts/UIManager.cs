@@ -13,8 +13,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image _livesImage;
 
-//    [SerializeField]
-    public Sprite[] _bloomBombSprites;
+    [SerializeField]
+    private Sprite[] _bloomBombSprites;
     [SerializeField]
     private Image _bloomBombsImage;
 
@@ -99,14 +99,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void UpdateBloomBombsArray(int currentBloomBombs)
+    public void UpdateBloomBombsHUDArray(int currentBloomBombs)
     {
         _bloomBombsImage.sprite = _bloomBombSprites[currentBloomBombs];
 
-        if(currentBloomBombs < 1)
+        if(currentBloomBombs == 0)
         {
-            Debug.Log("Bombs " + currentBloomBombs);
-            currentBloomBombs = 0;
+            _player._bloomBombs = 0;
         }
     }
 
