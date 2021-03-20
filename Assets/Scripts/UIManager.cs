@@ -13,8 +13,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image _livesImage;
 
-    [SerializeField]
-    private Sprite[] _bloomBombSprites;
+//    [SerializeField]
+    public Sprite[] _bloomBombSprites;
     [SerializeField]
     private Image _bloomBombsImage;
 
@@ -103,10 +103,10 @@ public class UIManager : MonoBehaviour
     {
         _bloomBombsImage.sprite = _bloomBombSprites[currentBloomBombs];
 
-        if(Input.GetKeyDown(KeyCode.B) && currentBloomBombs < 1)
+        if(currentBloomBombs < 1)
         {
+            Debug.Log("Bombs " + currentBloomBombs);
             currentBloomBombs = 0;
-            Debug.Log("BLOOM BOMBS DEPLETED");
         }
     }
 

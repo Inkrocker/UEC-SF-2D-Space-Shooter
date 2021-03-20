@@ -15,11 +15,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject _tripleShotPrefab;
 
+    [SerializeField]
+    private GameObject _bloomBombPrefab;
+
     private float _fireRate = 0.2f;
 
     private float _doubleFireRate = 0.175f;
 
     private float _tripleFireFate = 0.05f;
+
+    private float _bloomBombFireRate = 0f;
 
     private float _canFire = -1.0f;
 
@@ -199,7 +204,7 @@ public class Player : MonoBehaviour
     }
 
 //----------- WEAPON BEHAVIOR ----------------
-    void LaserShot()
+    private void LaserShot()
     {
         var laserOffset = new Vector3(1.348f, -0.282f, 0.0f);
 
@@ -223,6 +228,18 @@ public class Player : MonoBehaviour
 
         _audioSource.Play();
     }
+
+    private void BloomBombShot()
+    {
+        var bloomBombOffset = new Vector3(0.205f, -0.533f, 0);
+
+        if (isBloomBombsActive == true)
+        {
+            _canFire = Time.deltaTime + _bloomBombFireRate;
+            Instantiate(_bloomBombPrefab, transform.position + bloomBombOffset, Quaternion.Euler(0, 0, -70));
+        }
+    }
+
 //----------- PLAYER DAMAGE ----------------
     public void Damage()
     {
@@ -344,8 +361,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B))
         {
             _bloomBombs -= 1;
-
             _uiManager.UpdateBloomBombsArray(_bloomBombs);
+            BloomBombShot();
         }
     }
 

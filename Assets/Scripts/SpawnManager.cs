@@ -120,10 +120,10 @@ public class SpawnManager : MonoBehaviour
     {
         while(_stopSpawning == false)
         {
-            yield return new WaitForSeconds(Random.Range(40, 120));
+            yield return new WaitForSeconds(Random.Range(40f, 60f));
             Vector3 posToSpawnBloomBomb = new Vector3(Random.Range(-4.0f, 4.25f), 11, 0);
             Instantiate(_bloomBombPrefab, posToSpawnBloomBomb, Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range(40, 120));
+            yield return new WaitForSeconds(Random.Range(20, 40));
         }
     }
 
