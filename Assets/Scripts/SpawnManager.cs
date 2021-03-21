@@ -123,7 +123,7 @@ public class SpawnManager : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(40f, 60f));
             Vector3 posToSpawnBloomBomb = new Vector3(Random.Range(-4.0f, 4.25f), 11, 0);
             Instantiate(_bloomBombPrefab, posToSpawnBloomBomb, Quaternion.identity);
-            yield return new WaitForSeconds(Random.Range(13, 20));
+            yield return new WaitForSeconds(Random.Range(12, 15));
         }
     }
 

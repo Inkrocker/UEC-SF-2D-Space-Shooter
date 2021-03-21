@@ -5,7 +5,7 @@ using UnityEngine;
 public class BloomBomb : MonoBehaviour
 {
     [SerializeField]
-    private float _bloomBombSpeed = 2;
+    private float _bloomBombSpeed = 4;
 
     [SerializeField]
     private GameObject _bombExplosionPrefab;
@@ -30,6 +30,6 @@ public class BloomBomb : MonoBehaviour
     {
         Vector3 posToSpawnBombExplosion = new Vector3(transform.position.x, -4.2f, 0);
         var tempBomb = Instantiate(_bombExplosionPrefab, posToSpawnBombExplosion, Quaternion.identity);
-        Destroy(tempBomb, 2.25f);
+        Destroy(tempBomb, 2.3f);
     }
 }
