@@ -242,7 +242,7 @@ public class Player : MonoBehaviour
         }
     }
 
-//----------- PLAYER DAMAGE ----------------
+    //----------- PLAYER DAMAGE ----------------
     public void Damage()
     {
         if (isShieldsActive == true)

@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2592943961726003663}
   - component: {fileID: 7928485447766865489}
-  - component: {fileID: 4989038467469706425}
+  - component: {fileID: 9008966730338935733}
   - component: {fileID: 1364555054740516547}
   - component: {fileID: -7452590431744360651}
   - component: {fileID: -531961640902302812}
   m_Layer: 0
   m_Name: EnemyAsteroid01
-  m_TagString: EnemyAsteroids
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &4989038467469706425
+--- !u!50 &9008966730338935733
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

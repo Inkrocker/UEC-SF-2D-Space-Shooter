@@ -12,7 +12,7 @@ public class Laser : MonoBehaviour
         LaserMoveRight();
     }
 
-    void LaserMoveRight()
+    private void LaserMoveRight()
     {
         transform.Translate(_laserSpeed * Vector3.right * Time.deltaTime);
 

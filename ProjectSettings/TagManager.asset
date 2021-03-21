@@ -10,10 +10,12 @@ TagManager:
   - PowerUps
   - EarthUI
   - CreditsPanel
-  - EnemyAsteroids
   - MoonSurface
   - EnemyHealth
   - PausePanel
+  - ClosePausePanel
+  - BloomBomb
+  - EnemyAsteroids
   layers:
   - Default
   - TransparentFX

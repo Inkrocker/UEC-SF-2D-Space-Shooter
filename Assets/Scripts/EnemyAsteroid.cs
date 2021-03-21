@@ -61,39 +61,57 @@ public class EnemyAsteroid : MonoBehaviour
         else if (other.tag == "Laser")
         {
             Destroy(other.gameObject);
-            
+
             _asteroidHealth--;
             StartCoroutine(FlashAsteroidRed());
 
-
-            if (_asteroidHealth == 0 && _player != null)
+            if (_asteroidHealth == 0)
             {
                 Destroy(GetComponent<Collider2D>());
                 Destroy(GetComponent<Rigidbody2D>());
                 Destroy(this.gameObject);
-                StartCoroutine(AddPoints());
+                StartCoroutine(AddToScore());
                 Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y, 0);
                 Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
             }
         }
-    }
 
-    IEnumerator AddPoints()
-    {
-        _player.AddToScore(_pointsAwarded);
-        yield return new WaitForSeconds(0.2f);
-    }
-
-    IEnumerator FlashAsteroidRed()
-    {
-        _spriteFlashColor.color = Color.red;
-        yield return new WaitForSeconds(0.125f);
-        _spriteFlashColor.color = Color.white;
-
-        if (_asteroidHealth == 0)
+        else if (other.tag == "BloomBomb")
         {
             _asteroidHealth = 0;
-            StopCoroutine(FlashAsteroidRed());
+            StartCoroutine(FlashAsteroidRed());
+
+            if (_asteroidHealth == 0)
+            {
+                Destroy(GetComponent<Collider2D>());
+                Destroy(GetComponent<Rigidbody2D>());
+                Destroy(this.gameObject);
+                StartCoroutine(AddToScore());
+                Vector3 SpawnEnemyAsteroidExplosion = new Vector3(transform.position.x, transform.position.y, 0);
+                Instantiate(_explosionPrefab, SpawnEnemyAsteroidExplosion, Quaternion.identity);
+            }
+        }
+
+        IEnumerator AddToScore()
+        {
+            if(_player != null)
+            {
+                _player.AddToScore(_pointsAwarded);
+                yield return new WaitForSeconds(0.2f);
+            }
+        }
+
+        IEnumerator FlashAsteroidRed()
+        {
+            _spriteFlashColor.color = Color.red;
+            yield return new WaitForSeconds(0.125f);
+            _spriteFlashColor.color = Color.white;
+
+            if (_asteroidHealth == 0)
+            {
+                _asteroidHealth = 0;
+                StopCoroutine(FlashAsteroidRed());
+            }
         }
     }
 }

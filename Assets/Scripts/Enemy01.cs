@@ -18,11 +18,11 @@ public class Enemy01 : MonoBehaviour
 
     private void Start()
     {
-        _enemy01Speed = Random.Range(2.25f, 3.5f);
-        transform.position = new Vector3(11.0f, Random.Range (-4.0f, 4.25f), 0.0f);
+        _enemy01Speed = Random.Range(2f, 3.5f);
+        transform.position = new Vector3(11.0f, Random.Range(-4.0f, 4.25f), 0.0f);
 
         _audioSource = GetComponent<AudioSource>();
-        if(_audioSource == null)
+        if (_audioSource == null)
         {
             Debug.LogError("The Enemy01 AudioSource is NULL!");
         }
@@ -34,7 +34,7 @@ public class Enemy01 : MonoBehaviour
         }
 
         _enemy01_Anim = gameObject.GetComponent<Animator>();
-        if(_enemy01_Anim == null)
+        if (_enemy01_Anim == null)
         {
             Debug.LogError("The Enemy01 Animator component is NULL!");
         }
@@ -58,12 +58,12 @@ public class Enemy01 : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {   
-        if(other.tag == "Player")
+    {
+        if (other.tag == "Player")
         {
             Player player = other.transform.GetComponent<Player>();
-            
-            if(player != null)
+
+            if (player != null)
             {
                 player.Damage();
             }
@@ -73,14 +73,14 @@ public class Enemy01 : MonoBehaviour
             Destroy(this.gameObject, 1.5f);
         }
 
-        else if(other.tag == "Laser")
+        else if (other.tag == "Laser")
         {
             Destroy(other.gameObject);
 
             _enemyHealth--;
             StartCoroutine(FlashRed());
 
-            if(_enemyHealth == 0 && _player != null)
+            if (_enemyHealth == 0)
             {
                 _player.AddToScore(10);
                 _enemy01Speed = Random.Range(0.25f, 1.75f);
@@ -90,18 +90,34 @@ public class Enemy01 : MonoBehaviour
                 Destroy(this.gameObject, 1.5f);
             }
         }
-    }
 
-    IEnumerator FlashRed()
-    {
-        _spriteFlashColor.color = Color.red;
-        yield return new WaitForSeconds(0.125f);
-        _spriteFlashColor.color = Color.white;
-
-        if(_enemyHealth == 0)
+        else if (other.tag == "BloomBomb")
         {
             _enemyHealth = 0;
-            StopCoroutine(FlashRed());
+            StartCoroutine(FlashRed());
+
+            if (_enemyHealth == 0)
+            {
+                _player.AddToScore(10);
+                _enemy01Speed = Random.Range(0.25f, 1.75f);
+                _enemy01_Anim.SetTrigger("OnEnemyDeath");
+                _audioSource.Play();
+                Destroy(GetComponent<Collider2D>());
+                Destroy(this.gameObject, 1.5f);
+            }
+        }
+
+        IEnumerator FlashRed()
+        {
+            _spriteFlashColor.color = Color.red;
+            yield return new WaitForSeconds(0.125f);
+            _spriteFlashColor.color = Color.white;
+
+            if (_enemyHealth == 0)
+            {
+                _enemyHealth = 0;
+                StopCoroutine(FlashRed());
+            }
         }
     }
 }

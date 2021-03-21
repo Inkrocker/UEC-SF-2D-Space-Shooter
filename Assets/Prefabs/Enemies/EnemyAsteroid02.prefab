@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4913681667995063663}
   m_Layer: 0
   m_Name: EnemyAsteroid02
-  m_TagString: EnemyAsteroids
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   _explosionPrefab: {fileID: 7846811105125378785, guid: 177dc421f82cb284882c5ae6a708d05a,
     type: 3}
   _spriteFlashColor: {fileID: 1705793920096596222}
-  _asteroidHealth: 4
+  _asteroidHealth: 1
   _pointsAwarded: 15
 --- !u!114 &-4913681667995063663
 MonoBehaviour:
