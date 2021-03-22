@@ -15,7 +15,6 @@ TagManager:
   - PausePanel
   - ClosePausePanel
   - BloomBomb
-  - EnemyAsteroids
   layers:
   - Default
   - TransparentFX

@@ -5,16 +5,15 @@ using UnityEngine;
 public class Enemy01 : MonoBehaviour
 {
     private float _enemy01Speed;
+    [SerializeField]
+    private int _enemyHealth = 3;
+    public SpriteRenderer _spriteFlashColor;
+    private Animator _enemy01_Anim;
+    private AudioSource _audioSource;
 
     private Player _player;
-
-    private Animator _enemy01_Anim;
-
-    private int _enemyHealth = 3;
-
-    public SpriteRenderer _spriteFlashColor;
-
-    private AudioSource _audioSource;
+    [SerializeField]
+    private int _pointsAwarded;
 
     private void Start()
     {
@@ -82,7 +81,7 @@ public class Enemy01 : MonoBehaviour
 
             if (_enemyHealth == 0)
             {
-                _player.AddToScore(10);
+                _player.AddToScore(_pointsAwarded);
                 _enemy01Speed = Random.Range(0.25f, 1.75f);
                 _enemy01_Anim.SetTrigger("OnEnemyDeath");
                 _audioSource.Play();
@@ -98,7 +97,7 @@ public class Enemy01 : MonoBehaviour
 
             if (_enemyHealth == 0)
             {
-                _player.AddToScore(10);
+                _player.AddToScore(_pointsAwarded);
                 _enemy01Speed = Random.Range(0.25f, 1.75f);
                 _enemy01_Anim.SetTrigger("OnEnemyDeath");
                 _audioSource.Play();

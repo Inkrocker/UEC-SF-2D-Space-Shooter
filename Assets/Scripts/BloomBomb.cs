@@ -22,11 +22,11 @@ public class BloomBomb : MonoBehaviour
         if (transform.position.y <= -4.2f)
         {
             Destroy(this.gameObject);
-            BloomBombExplodeScaler();
+            BloomBombExplodes();
         }
     }
 
-    private void BloomBombExplodeScaler()
+    private void BloomBombExplodes()
     {
         Vector3 posToSpawnBombExplosion = new Vector3(transform.position.x, -4.2f, 0);
         var tempBomb = Instantiate(_bombExplosionPrefab, posToSpawnBombExplosion, Quaternion.identity);

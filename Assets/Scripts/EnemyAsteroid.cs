@@ -6,14 +6,11 @@ public class EnemyAsteroid : MonoBehaviour
 {
     [SerializeField]
     private GameObject _explosionPrefab;
-
-    private Player _player;
-
     public SpriteRenderer _spriteFlashColor;
-
     [SerializeField]
     private int _asteroidHealth;
 
+    private Player _player;
     [SerializeField]
     private int _pointsAwarded;
 

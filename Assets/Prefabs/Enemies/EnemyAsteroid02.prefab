@@ -139,8 +139,8 @@ MonoBehaviour:
   _explosionPrefab: {fileID: 7846811105125378785, guid: 177dc421f82cb284882c5ae6a708d05a,
     type: 3}
   _spriteFlashColor: {fileID: 1705793920096596222}
-  _asteroidHealth: 1
-  _pointsAwarded: 15
+  _asteroidHealth: 3
+  _pointsAwarded: 30
 --- !u!114 &-4913681667995063663
 MonoBehaviour:
   m_ObjectHideFlags: 0

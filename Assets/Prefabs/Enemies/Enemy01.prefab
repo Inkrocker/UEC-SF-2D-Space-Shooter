@@ -251,4 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0377a07555fee77488ad9cee4ab94990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyHealth: 3
   _spriteFlashColor: {fileID: 6468017007213067272}
+  _pointsAwarded: 30

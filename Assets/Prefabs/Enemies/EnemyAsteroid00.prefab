@@ -140,7 +140,7 @@ MonoBehaviour:
     type: 3}
   _spriteFlashColor: {fileID: 7364600482866705390}
   _asteroidHealth: 4
-  _pointsAwarded: 25
+  _pointsAwarded: 40
 --- !u!114 &34991388
 MonoBehaviour:
   m_ObjectHideFlags: 0

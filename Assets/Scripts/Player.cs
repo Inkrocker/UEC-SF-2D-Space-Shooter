@@ -5,82 +5,60 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private UIManager _uiManager;
+    private SpawnManager _spawnManager;
 
     [SerializeField]
     private GameObject _laserPrefab;
-
     [SerializeField]
     private GameObject _doubleShotPrefab;
-
     [SerializeField]
     private GameObject _tripleShotPrefab;
-
     [SerializeField]
     private GameObject _bloomBombPrefab;
 
-    private float _fireRate = 0.2f;
-
-    private float _doubleFireRate = 0.175f;
-
-    private float _tripleFireFate = 0.05f;
-
-    private float _bloomBombFireRate = 0f;
+    [SerializeField]
+    private GameObject _shieldVisualPrefab;
+    [SerializeField]
+    private GameObject _shieldVisualPrefab2;
+    [SerializeField]
+    private GameObject _shieldVisualPrefab3;
+    private int _shieldStrength = 3;
 
     private float _canFire = -1.0f;
+    private float _fireRate = 0.2f;
+    private float _doubleFireRate = 0.175f;
+    private float _tripleFireFate = 0.05f;
+    private float _bloomBombFireRate = 0f;
 
     private int _lives = 3;
-
     public int _bloomBombs = 0;
-
     private int _score;
-
     private float _speed = 5;
 
-    private SpawnManager _spawnManager;
-
     public bool isDoubleShotActive = false;
-
     public bool isTripleShotActive = false;
-
     public bool isSpeedBoostActive = false;
-
     public bool isShieldsActive = false;
-
     public bool isLifeUpActive = false;
-
     public bool isBloomBombsHUDActive = false;
-
     public bool isBloomBombWeaponActive = false;
 
     [SerializeField]
-    private GameObject _shieldVisualPrefab;
-
+    private SpriteRenderer _playerFlashColor;
     [SerializeField]
-    private GameObject _shieldVisualPrefab2;
-
-    [SerializeField]
-    private GameObject _shieldVisualPrefab3;
-
-    private int _shieldStrength = 3;
-
+    private GameObject _dmgVignettePrefab;
     [SerializeField]
     private GameObject _burnDmg01Prefab;
-
     [SerializeField]
     private GameObject _burnDmg02Prefab;
-
     [SerializeField]
     private GameObject _playerExplosionPrefab;
-
-    [SerializeField]
-    private SpriteRenderer _playerFlashColor;
 
     [SerializeField]
     private Animator _playerAnim;
 
     [SerializeField]
     private AudioClip _laserSoundClip;
-
     [SerializeField]
     private AudioSource _audioSource;
 
@@ -105,6 +83,9 @@ public class Player : MonoBehaviour
         {
             Debug.LogError("The Player Animator is NULL!");
         }
+
+        _dmgVignettePrefab.GetComponent<Animator>();
+
         _audioSource = GameObject.Find("Player").GetComponent<AudioSource>();
         if (_audioSource == null)
         {
@@ -131,7 +112,7 @@ public class Player : MonoBehaviour
         BloomBombsInput();
     }
 
-//----------- PLAYER ANIM VECTOR UP & DOWN ----------------
+    //----------- PLAYER ANIM VECTOR UP & DOWN ----------------\\
     void PlayerAnimUp()
     {
         if(Input.GetKeyDown(KeyCode.W))
@@ -176,7 +157,7 @@ public class Player : MonoBehaviour
         }
     }
 
-//----------- PLAYER HORIZONTAL & VERTICAL MOVEMENT ----------------
+    //----------- PLAYER HORIZONTAL & VERTICAL MOVEMENT ----------------\\
     void PlayerMovement()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -205,7 +186,7 @@ public class Player : MonoBehaviour
         }
     }
 
-//----------- WEAPON BEHAVIOR ----------------
+    //----------- WEAPON BEHAVIOR -----------------------------------------\\
     private void LaserShot()
     {
         var laserOffset = new Vector3(1.348f, -0.282f, 0.0f);
@@ -242,7 +223,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    //----------- PLAYER DAMAGE ----------------
+    //----------- PLAYER DAMAGE ------------------------------\\
     public void Damage()
     {
         if (isShieldsActive == true)
@@ -275,8 +256,8 @@ public class Player : MonoBehaviour
         }
 
         _lives -= 1;
+        StartCoroutine(DamageVignetteFX());
         StartCoroutine(PlayerFlashDamage());
-
         _uiManager.UpdateLifeArray(_lives);
         BurnDamage();
 
@@ -298,13 +279,22 @@ public class Player : MonoBehaviour
         _playerFlashColor.color = Color.white;
     }
 
+    IEnumerator DamageVignetteFX()
+    {
+        _dmgVignettePrefab.SetActive(true);
+        _dmgVignettePrefab.GetComponent<Animator>().enabled = true;
+        yield return new WaitForSeconds(0.3f);
+        _dmgVignettePrefab.SetActive(false);
+        _dmgVignettePrefab.GetComponent<Animator>().enabled = false;
+    }
+
     public void AddToScore(int points)
     {
         _score += points;
         _uiManager.UpdatePlayerScore(_score);
     }
 
-//----------- DOUBLE SHOT ----------------
+    //----------- DOUBLE SHOT --------------------------------------\\
     public void DoubleShotActive()
     {
         isDoubleShotActive = true;
@@ -317,7 +307,7 @@ public class Player : MonoBehaviour
         isDoubleShotActive = false;
     }
 
-//----------- TRIPLE SHOT ----------------
+    //----------- TRIPLE SHOT ------------------------------------\\
     public void TripleShotActive()
     {
         isTripleShotActive = true;
@@ -329,7 +319,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(6f);
         isTripleShotActive = false;
     }
-//----------- SPEED BOOST ----------------
+    //----------- SPEED BOOST --------------------------------------\\
     public void SpeedPowerUpActive()
     {
         if (isSpeedBoostActive != true)
@@ -347,7 +337,7 @@ public class Player : MonoBehaviour
         _speed = 5;
     }
 
-//----------- PLAYER SHIELDS ----------------
+    //----------- PLAYER SHIELDS ----------------------------\\
     public void ShieldsActive()
     {
         isShieldsActive = true;
@@ -357,7 +347,7 @@ public class Player : MonoBehaviour
         }
     }
 
-//----------- BLOOM BOMBS ----------------
+    //----------- BLOOM BOMBS ----------------------------\\
     public void BloomBombsInput()
     {
         if (Input.GetKeyDown(KeyCode.B) && _bloomBombs > 0)
@@ -405,11 +395,11 @@ public class Player : MonoBehaviour
         else if (_bloomBombs == 3)
         {
             _bloomBombs = 3;
-            // Maximum bombs collected
+            // Maximum Bombs Cap
         }
     }
 
-//----------- PLAYER LIVES ----------------
+    //----------- PLAYER LIVES RECOVERED ----------------------------\\
     public void LifeUpActive()
     {
         isLifeUpActive = true;
@@ -417,7 +407,7 @@ public class Player : MonoBehaviour
         if(_lives == 3)
         {
             _lives = 3;
-            // No change to lives
+            // MAX lives Cap
         }
 
         else if(_lives == 2)
@@ -435,7 +425,7 @@ public class Player : MonoBehaviour
         }
     }
 
-//----------- PLAYER BURN DAMAGE SPRITES ----------------
+    //----------- PLAYER BURN DAMAGE SPRITES ---------------------------\\
     public void BurnDamage()
     {
         if(_lives == 2)
