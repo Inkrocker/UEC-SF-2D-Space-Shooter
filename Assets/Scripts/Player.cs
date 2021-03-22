@@ -48,6 +48,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject _dmgVignettePrefab;
     [SerializeField]
+    private GameObject _healVignettePrefab;
+
+    [SerializeField]
     private GameObject _burnDmg01Prefab;
     [SerializeField]
     private GameObject _burnDmg02Prefab;
@@ -85,6 +88,7 @@ public class Player : MonoBehaviour
         }
 
         _dmgVignettePrefab.GetComponent<Animator>();
+        _healVignettePrefab.GetComponent<Animator>();
 
         _audioSource = GameObject.Find("Player").GetComponent<AudioSource>();
         if (_audioSource == null)
@@ -272,11 +276,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator PlayerFlashDamage()
+    IEnumerator HealVignetteFX()
     {
-        _playerFlashColor.color = Color.red;
-        yield return new WaitForSeconds(0.115f);
-        _playerFlashColor.color = Color.white;
+        _healVignettePrefab.SetActive(true);
+        _healVignettePrefab.GetComponent<Animator>().enabled = true;
+        yield return new WaitForSeconds(0.3f);
+        _healVignettePrefab.SetActive(false);
+        _healVignettePrefab.GetComponent<Animator>().enabled = false;
     }
 
     IEnumerator DamageVignetteFX()
@@ -286,6 +292,13 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         _dmgVignettePrefab.SetActive(false);
         _dmgVignettePrefab.GetComponent<Animator>().enabled = false;
+    }
+
+    IEnumerator PlayerFlashDamage()
+    {
+        _playerFlashColor.color = Color.red;
+        yield return new WaitForSeconds(0.115f);
+        _playerFlashColor.color = Color.white;
     }
 
     public void AddToScore(int points)
@@ -406,22 +419,24 @@ public class Player : MonoBehaviour
 
         if(_lives == 3)
         {
-            _lives = 3;
+            _lives += 0;
             // MAX lives Cap
         }
 
         else if(_lives == 2)
         {
-            _lives = 3;
+            _lives += 1;
             _uiManager.UpdateLifeArray(_lives);
             _burnDmg01Prefab.SetActive(false);
+            StartCoroutine(HealVignetteFX());
         }
 
         else if(_lives == 1)
         {
-            _lives = 2;
+            _lives += 1;
             _uiManager.UpdateLifeArray(_lives);
             _burnDmg02Prefab.SetActive(false);
+            StartCoroutine(HealVignetteFX());
         }
     }
 
