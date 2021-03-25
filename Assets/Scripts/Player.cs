@@ -297,7 +297,14 @@ public class Player : MonoBehaviour
     IEnumerator PlayerFlashDamage()
     {
         _playerFlashColor.color = Color.red;
-        yield return new WaitForSeconds(0.115f);
+        yield return new WaitForSeconds(0.125f);
+        _playerFlashColor.color = Color.white;
+    }
+
+    IEnumerator PlayerFlashHeals()
+    {
+        _playerFlashColor.color = Color.green;
+        yield return new WaitForSeconds(0.15f);
         _playerFlashColor.color = Color.white;
     }
 
@@ -428,6 +435,7 @@ public class Player : MonoBehaviour
             _lives += 1;
             _uiManager.UpdateLifeArray(_lives);
             _burnDmg01Prefab.SetActive(false);
+            StartCoroutine(PlayerFlashHeals());
             StartCoroutine(HealVignetteFX());
         }
 
@@ -436,6 +444,7 @@ public class Player : MonoBehaviour
             _lives += 1;
             _uiManager.UpdateLifeArray(_lives);
             _burnDmg02Prefab.SetActive(false);
+            StartCoroutine(PlayerFlashHeals());
             StartCoroutine(HealVignetteFX());
         }
     }
