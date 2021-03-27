@@ -8,9 +8,9 @@ public class CameraShake : MonoBehaviour
     {
         Vector3 defaultCamPos = transform.localPosition;
 
-        float elapsed = 0.0f;
+        float timePassed = 0.0f;
 
-        while(elapsed < duration)
+        while(timePassed < duration)
         {
             float xPos = Random.Range(-0.4f, 0.4f) * strength;
             float yPos = Random.Range(-0.4f, 0.4f) * strength;
@@ -18,7 +18,7 @@ public class CameraShake : MonoBehaviour
 
             transform.localPosition = new Vector3(xPos, yPos, zPos);
 
-            elapsed += Time.deltaTime;
+            timePassed += Time.deltaTime;
 
             yield return null;
         }

@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934c5151cfbec824eb4b9d3a713a81ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraShake: {fileID: 0}
   _laserPrefab: {fileID: 5736318613218722314, guid: 858f5d4f657819d48b69833e4031a68e,
     type: 3}
   _doubleShotPrefab: {fileID: 6686201887964993936, guid: 6238dcd56b2d6da42afff179d9a35f56,
@@ -112,6 +113,9 @@ MonoBehaviour:
     type: 3}
   _bloomBombPrefab: {fileID: 4057715810689545110, guid: fa09b14c8a11c1f46b0a495986348775,
     type: 3}
+  _shieldVisualPrefab: {fileID: 3485108153159947061}
+  _shieldVisualPrefab2: {fileID: 6921583627405433926}
+  _shieldVisualPrefab3: {fileID: 2071223170437495434}
   _bloomBombs: 0
   isDoubleShotActive: 0
   isTripleShotActive: 0
@@ -120,16 +124,14 @@ MonoBehaviour:
   isLifeUpActive: 0
   isBloomBombsHUDActive: 0
   isBloomBombWeaponActive: 0
-  _shieldVisualPrefab: {fileID: 3485108153159947061}
-  _shieldVisualPrefab2: {fileID: 6921583627405433926}
-  _shieldVisualPrefab3: {fileID: 2071223170437495434}
+  _playerFlashColor: {fileID: 3932892929995144244}
+  _dmgVignettePrefab: {fileID: 0}
+  _healVignettePrefab: {fileID: 0}
   _burnDmg01Prefab: {fileID: 6491840947154134005}
   _burnDmg02Prefab: {fileID: 529685334027025289}
   _playerExplosionPrefab: {fileID: 3378252163499441744, guid: eab800e1c058d3a40bb58a3fc011d371,
     type: 3}
-  _playerFlashColor: {fileID: 3932892929995144244}
   _playerAnim: {fileID: 31414095}
-  _bloomBombAnim: {fileID: 0}
   _laserSoundClip: {fileID: 8300000, guid: 75676f361bdfeaf41a46623e95df3dbc, type: 3}
   _audioSource: {fileID: 5918226847599463641}
 --- !u!60 &127646261
@@ -192,7 +194,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 100
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -245,7 +247,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5555556
       inSlope: 0
       outSlope: 0
       tangentMode: 0
