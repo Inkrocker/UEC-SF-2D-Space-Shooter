@@ -661,9 +661,9 @@ ParticleSystem:
     enabled: 1
     type: 8
     angle: 10
-    length: 1.7
+    length: 1.3
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0
+    radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -735,7 +735,7 @@ ParticleSystem:
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: b501eed02fcc0c640a4779b93d2afc77, type: 3}
     m_TextureClipChannel: 3
     m_TextureClipThreshold: 0
     m_TextureUVChannel: 0
@@ -746,7 +746,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1.3
+      value: 1.2
       mode: 0
       spread: 0
       speed:
@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 300
+      scalar: 250
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1304,8 +1304,8 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.83137256, g: 0.33770853, b: 0, a: 0.07058824}
-        key1: {r: 1, g: 0.4366033, b: 0, a: 0.30980393}
-        key2: {r: 1, g: 0.31818184, b: 0, a: 0.078431375}
+        key1: {r: 1, g: 0.4366033, b: 0, a: 0.39215687}
+        key2: {r: 1, g: 0.31818184, b: 0, a: 0.7058824}
         key3: {r: 0.6037736, g: 0.10108922, b: 0.019935932, a: 0.49019608}
         key4: {r: 0.14286241, g: 0.112537846, b: 0.11840713, a: 0.3019608}
         key5: {r: 0.018487796, g: 0.014563501, b: 0.015323043, a: 0}
@@ -1320,8 +1320,8 @@ ParticleSystem:
         ctime6: 65535
         ctime7: 0
         atime0: 0
-        atime1: 2506
-        atime2: 17733
+        atime1: 2891
+        atime2: 9830
         atime3: 38743
         atime4: 62258
         atime5: 65535
@@ -1480,7 +1480,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 97321017619988f4faf125003a286c06, type: 3}
+    - sprite: {fileID: 21300000, guid: 1fa685472f06bde42860ab0482f52ae0, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -2682,8 +2682,8 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.05
-      minScalar: 1.16
+      scalar: 0.5
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2839,12 +2839,12 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 1.48
-    damping: 0
-    octaves: 1
+    frequency: 1
+    damping: 1
+    octaves: 2
     octaveMultiplier: 0.8
-    octaveScale: 1.725
-    quality: 2
+    octaveScale: 1.7
+    quality: 1
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
@@ -4798,7 +4798,7 @@ ParticleSystemRenderer:
   m_AllowRoll: 0
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 000304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}

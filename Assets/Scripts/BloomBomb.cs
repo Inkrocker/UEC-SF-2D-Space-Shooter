@@ -19,7 +19,7 @@ public class BloomBomb : MonoBehaviour
     {
         transform.Translate(_bloomBombSpeed * Vector3.right * Time.deltaTime);
         
-        if (transform.position.y <= -4.2f)
+        if (transform.position.y <= -4.3f)
         {
             Destroy(this.gameObject);
             BloomBombExplodes();
@@ -28,7 +28,7 @@ public class BloomBomb : MonoBehaviour
 
     private void BloomBombExplodes()
     {
-        Vector3 posToSpawnBombExplosion = new Vector3(transform.position.x, -4.2f, 0);
+        Vector3 posToSpawnBombExplosion = new Vector3(transform.position.x, -4.3f, 0);
         var tempBomb = Instantiate(_bombExplosionPrefab, posToSpawnBombExplosion, Quaternion.identity);
         Destroy(tempBomb, 2.3f);
     }
