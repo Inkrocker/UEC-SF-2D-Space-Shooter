@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     private UIManager _uiManager;
     private SpawnManager _spawnManager;
+    public CameraShake cameraShake;
 
     [SerializeField]
     private GameObject _laserPrefab;
@@ -233,6 +234,7 @@ public class Player : MonoBehaviour
         if (isShieldsActive == true)
         {
             _shieldStrength--;
+            StartCoroutine(cameraShake.CameraShakeRoutine(0.4f, 0.2f));
 
             if (_shieldStrength == 2)
             {
@@ -260,6 +262,7 @@ public class Player : MonoBehaviour
         }
 
         _lives -= 1;
+        StartCoroutine(cameraShake.CameraShakeRoutine(0.4f, 0.2f));
         StartCoroutine(DamageVignetteFX());
         StartCoroutine(PlayerFlashDamage());
         _uiManager.UpdateLifeArray(_lives);
@@ -270,7 +273,7 @@ public class Player : MonoBehaviour
             Vector3 SpawnPlayerExplosion = new Vector3(transform.position.x, transform.position.y, 0.0f);
             Instantiate(_playerExplosionPrefab, SpawnPlayerExplosion, Quaternion.identity);
             _speed = 0;
-            Destroy(this.gameObject, 0.15f);
+            Destroy(this.gameObject, 0.5f);
             _spawnManager.PlayerDead();
             _uiManager.GameOverSequence();
         }

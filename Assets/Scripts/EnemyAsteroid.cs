@@ -18,7 +18,6 @@ public class EnemyAsteroid : MonoBehaviour
     {
         transform.position = new Vector3(Random.Range(0.0f, 9.6f), 7.35f, 0.0f);
 
-        Debug.LogError(_player);
         _player = GameObject.Find("Player").GetComponent<Player>();
         if (_player == null)
         {

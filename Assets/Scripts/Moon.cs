@@ -18,7 +18,7 @@ public class Moon : MonoBehaviour
 
         if (transform.position.x <= -20.48f)
         {
-            transform.position = new Vector3(40.96f, -3.50f, 0.0f);
+            transform.position = new Vector3(40.96f, -3.25f, 0.0f);
         }
     }
 }
