@@ -69,6 +69,7 @@ public class Enemy01 : MonoBehaviour
             _enemy01Speed = Random.Range(0.25f, 1.75f);
             _enemy01_Anim.SetTrigger("OnEnemyDeath");
             _audioSource.Play();
+            Destroy(GetComponent<Collider2D>());
             Destroy(this.gameObject, 1.5f);
         }
 

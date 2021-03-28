@@ -192,27 +192,27 @@ PrefabInstance:
     - target: {fileID: 6092876800997019389, guid: 278a57133a4e04a44bb0079e8662cc08,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.38511804
+      value: 0.39540917
       objectReference: {fileID: 0}
     - target: {fileID: 6092876800997019389, guid: 278a57133a4e04a44bb0079e8662cc08,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5930296
+      value: -0.58621806
       objectReference: {fileID: 0}
     - target: {fileID: 6092876800997019389, guid: 278a57133a4e04a44bb0079e8662cc08,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.38511804
+      value: -0.39540917
       objectReference: {fileID: 0}
     - target: {fileID: 6092876800997019389, guid: 278a57133a4e04a44bb0079e8662cc08,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5930296
+      value: -0.58621806
       objectReference: {fileID: 0}
     - target: {fileID: 6092876800997019389, guid: 278a57133a4e04a44bb0079e8662cc08,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -114
+      value: -112
       objectReference: {fileID: 0}
     - target: {fileID: 6092876800997019389, guid: 278a57133a4e04a44bb0079e8662cc08,
         type: 3}
@@ -222,6 +222,71 @@ PrefabInstance:
     - target: {fileID: 6092876800997019389, guid: 278a57133a4e04a44bb0079e8662cc08,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: ShapeModule.length
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: NoiseModule.damping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: NoiseModule.octaves
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: NoiseModule.quality
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: NoiseModule.frequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: NoiseModule.strength.scalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: NoiseModule.sizeAmount.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: NoiseModule.strength.minScalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: NoiseModule.rotationAmount.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092876800997019391, guid: 278a57133a4e04a44bb0079e8662cc08,
+        type: 3}
+      propertyPath: ShapeModule.m_TextureBilinearFiltering
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
