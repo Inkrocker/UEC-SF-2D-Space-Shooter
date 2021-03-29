@@ -7,7 +7,10 @@ using UnityEngine.UI;
 
 public class SoundToggle : MonoBehaviour
 {
+    [SerializeField]
     private Toggle _soundToggle;
+    [SerializeField]
+    private AudioListener _audioListener;
 
     [SerializeField]
     private AudioSource _musicToggle;

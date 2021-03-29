@@ -52,7 +52,7 @@ public class UIManager : MonoBehaviour
     private GameManager _gameManager;
 
     [SerializeField]
-    private GameObject _pauseButton;
+    private GameObject _optionsButton;
 
     private Player _player;
 

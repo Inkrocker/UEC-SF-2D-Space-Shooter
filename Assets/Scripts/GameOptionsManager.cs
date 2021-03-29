@@ -4,11 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PauseManager : MonoBehaviour
+public class GameOptionsManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _inGameOptions;
-
     private void Update()
     {
         //QuitGame();
