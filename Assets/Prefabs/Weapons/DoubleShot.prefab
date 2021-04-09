@@ -39,6 +39,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4758056388774223568}
     m_Modifications:
+    - target: {fileID: 92220448498196693, guid: a2286391ea3f2d9468822a6c1ded96cd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 00fb0f1a8b2874544a2d147df5991fcb, type: 2}
     - target: {fileID: 4644853827684618268, guid: a2286391ea3f2d9468822a6c1ded96cd,
         type: 3}
       propertyPath: _laserSpeed
@@ -124,6 +129,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4758056388774223568}
     m_Modifications:
+    - target: {fileID: 92220448498196693, guid: a2286391ea3f2d9468822a6c1ded96cd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 00fb0f1a8b2874544a2d147df5991fcb, type: 2}
     - target: {fileID: 4644853827684618268, guid: a2286391ea3f2d9468822a6c1ded96cd,
         type: 3}
       propertyPath: _laserSpeed

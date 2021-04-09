@@ -22,7 +22,7 @@ PlayerSettings:
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
-  m_SplashScreenDrawMode: 0
+  m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 0.586
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 1
@@ -40,10 +40,14 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
+  - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
+    duration: 2.5
+  - logo: {fileID: 21300000, guid: 8c62ea7d694ab2440aacdc3b236c2b57, type: 3}
+    duration: 2.5
+  - logo: {fileID: 21300000, guid: 403394d8760ac34428bb4ccd1c413ece, type: 3}
+    duration: 2.5
   - logo: {fileID: 21300000, guid: a5797cd09fa6be8449aeb244a16a2f89, type: 3}
-    duration: 3
-  - logo: {fileID: 21300000, guid: 3a633edbaded6574db6ff4cc7ee2adab, type: 3}
-    duration: 2
+    duration: 2.5
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
@@ -131,7 +135,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleVersion: 1.6.2
+  bundleVersion: 1.6.3
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -153,7 +157,7 @@ PlayerSettings:
     Android: com.INKROCKERGAMES.UNITEDEARTHCOMMANDSPACEFORCE
     Standalone: com.INKROCKERGAMES.UNITEDEARTHCOMMANDSPACEFORCE
   buildNumber:
-    Standalone: 1.6.2
+    Standalone: 1.6.3
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
