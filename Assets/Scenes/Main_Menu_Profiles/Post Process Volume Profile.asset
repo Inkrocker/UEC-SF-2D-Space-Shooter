@@ -67,13 +67,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 17
+    value: 18
   threshold:
     overrideState: 1
-    value: 2.5
+    value: 1.4
   softKnee:
     overrideState: 1
-    value: 0.975
+    value: 0.985
   clamp:
     overrideState: 0
     value: 0.96
@@ -175,28 +175,28 @@ MonoBehaviour:
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     overrideState: 1
-    value: 0
+    value: 4
   saturation:
     overrideState: 1
-    value: 7
+    value: 13
   brightness:
     overrideState: 1
     value: 0
   postExposure:
     overrideState: 1
-    value: 1.3
+    value: 0.5
   contrast:
     overrideState: 1
-    value: 0
+    value: 3
   mixerRedOutRedIn:
     overrideState: 1
     value: 100
   mixerRedOutGreenIn:
     overrideState: 1
-    value: -7
+    value: 0
   mixerRedOutBlueIn:
     overrideState: 1
-    value: 1
+    value: 0
   mixerGreenOutRedIn:
     overrideState: 1
     value: 0
@@ -217,13 +217,13 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.9600327, y: 0.9296469, z: 1, w: -0.011217009}
+    value: {x: 0.9216595, y: 0.9926915, z: 1, w: -0.011217009}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.9118162, z: 0.8956446, w: 0.05444185}
+    value: {x: 0.9547245, y: 0.9859999, z: 1, w: 0.05444185}
   gain:
     overrideState: 1
-    value: {x: 0.81184703, y: 1, z: 0.86904514, w: -0.09422754}
+    value: {x: 1, y: 0.9508612, z: 0.99795115, w: -0.09422754}
   masterCurve:
     overrideState: 1
     value:
@@ -1436,7 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
   m_Name: Grain
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -1448,7 +1448,7 @@ MonoBehaviour:
     value: 0.2
   size:
     overrideState: 1
-    value: 0.3
+    value: 0.5
   lumContrib:
     overrideState: 1
     value: 1
