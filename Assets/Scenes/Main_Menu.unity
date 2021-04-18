@@ -4365,6 +4365,7 @@ GameObject:
   - component: {fileID: 1111464048}
   - component: {fileID: 1111464050}
   - component: {fileID: 1111464049}
+  - component: {fileID: 1111464051}
   m_Layer: 5
   m_Name: NebulaTop
   m_TagString: Untagged
@@ -4429,6 +4430,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111464047}
   m_CullTransparentMesh: 1
+--- !u!95 &1111464051
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111464047}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0efece078a84f904bac481453a6d0e0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1122285670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5331,6 +5351,7 @@ GameObject:
   - component: {fileID: 1397156241}
   - component: {fileID: 1397156243}
   - component: {fileID: 1397156242}
+  - component: {fileID: 1397156244}
   m_Layer: 5
   m_Name: Stars04
   m_TagString: Untagged
@@ -5395,6 +5416,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397156240}
   m_CullTransparentMesh: 1
+--- !u!95 &1397156244
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397156240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 824ccce0a4eb66042afca413a859d071, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1404855117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5791,6 +5831,7 @@ GameObject:
   - component: {fileID: 1512701598}
   - component: {fileID: 1512701600}
   - component: {fileID: 1512701599}
+  - component: {fileID: 1512701601}
   m_Layer: 5
   m_Name: NebulaBottom
   m_TagString: Untagged
@@ -5855,6 +5896,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512701597}
   m_CullTransparentMesh: 1
+--- !u!95 &1512701601
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512701597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1c2e7d42e5de47488169a3a67fa64b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1515482272
 GameObject:
   m_ObjectHideFlags: 0
@@ -9016,6 +9076,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flare00_ShortGlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781664401265600792, guid: 4e87cb6fc2558a147bf02b37103067f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5781664401265600793, guid: 4e87cb6fc2558a147bf02b37103067f3,
         type: 3}
