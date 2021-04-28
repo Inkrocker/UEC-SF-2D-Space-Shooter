@@ -9,16 +9,16 @@ public class Moon : MonoBehaviour
 
     void Update()
     {
-        MoonMovement();
+        MoonMovementFront();
     }
 
-    void MoonMovement()
+    void MoonMovementFront()
     {
         transform.Translate(_moonSpeed * Vector3.left * Time.deltaTime);
 
         if (transform.position.x <= -20.48f)
         {
-            transform.position = new Vector3(40.96f, -3.25f, 0.0f);
+            transform.position = new Vector3(40.96f, -3.23f, 0.0f);
         }
     }
 }

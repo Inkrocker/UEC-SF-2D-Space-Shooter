@@ -59,22 +59,22 @@ MonoBehaviour:
     value: 33
   colorFilter:
     overrideState: 1
-    value: {r: 0.61960787, g: 0.9073056, b: 1, a: 1}
+    value: {r: 0.6462264, g: 0.90345037, b: 1, a: 1}
   hueShift:
     overrideState: 0
     value: 0
   saturation:
     overrideState: 1
-    value: -5
+    value: 0
   brightness:
     overrideState: 0
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.25
+    value: 0.8
   contrast:
     overrideState: 1
-    value: 1
+    value: 2
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -1329,10 +1329,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 22
+    value: 23
   threshold:
     overrideState: 1
-    value: 0.88
+    value: 0.85
   softKnee:
     overrideState: 1
     value: 0.66
@@ -1357,7 +1357,7 @@ MonoBehaviour:
     defaultState: 1
   dirtIntensity:
     overrideState: 1
-    value: 0.5
+    value: 0.8
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1392,10 +1392,10 @@ MonoBehaviour:
     value: 1
   colored:
     overrideState: 1
-    value: 1
+    value: 0
   intensity:
     overrideState: 1
-    value: 0.135
+    value: 0.25
   size:
     overrideState: 1
     value: 0.3

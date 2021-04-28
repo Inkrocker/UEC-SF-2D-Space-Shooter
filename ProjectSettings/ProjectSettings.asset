@@ -41,13 +41,11 @@ PlayerSettings:
     height: 1
   m_SplashScreenLogos:
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
-    duration: 2.5
+    duration: 2
   - logo: {fileID: 21300000, guid: 8c62ea7d694ab2440aacdc3b236c2b57, type: 3}
-    duration: 2.5
+    duration: 2
   - logo: {fileID: 21300000, guid: 403394d8760ac34428bb4ccd1c413ece, type: 3}
-    duration: 2.5
-  - logo: {fileID: 21300000, guid: a5797cd09fa6be8449aeb244a16a2f89, type: 3}
-    duration: 2.5
+    duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
@@ -90,7 +88,7 @@ PlayerSettings:
   bakeCollisionMeshes: 1
   forceSingleInstance: 0
   useFlipModelSwapchain: 1
-  resizableWindow: 1
+  resizableWindow: 0
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
   gpuSkinning: 1
@@ -100,7 +98,7 @@ PlayerSettings:
   xboxEnableKinectAutoTracking: 0
   xboxEnableFitness: 0
   visibleInBackground: 1
-  allowFullscreenSwitch: 1
+  allowFullscreenSwitch: 0
   fullscreenMode: 0
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
@@ -135,7 +133,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleVersion: 1.8
+  bundleVersion: 1.8.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -157,7 +155,7 @@ PlayerSettings:
     Android: com.INKROCKERGAMES.UNITEDEARTHCOMMANDSPACEFORCE
     Standalone: com.INKROCKERGAMES.UNITEDEARTHCOMMANDSPACEFORCE
   buildNumber:
-    Standalone: 1.8
+    Standalone: 1.8.1
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
@@ -674,7 +672,7 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 6ef43627d41317249861a3471e6f5795,
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: b33f605b3127f934cac8bde0b66b33bf,
     type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
@@ -790,7 +788,7 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
-    Analytics: 1
+    Analytics: 0
     Build: 0
     Collab: 0
     Game Performance: 0

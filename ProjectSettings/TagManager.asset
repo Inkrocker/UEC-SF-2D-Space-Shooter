@@ -15,6 +15,7 @@ TagManager:
   - PausePanel
   - ClosePausePanel
   - BloomBomb
+  - MoonSrfaceBack
   layers:
   - Default
   - TransparentFX
